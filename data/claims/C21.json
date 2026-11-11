@@ -1,0 +1,54 @@
+{
+  "claim_id": "C21",
+  "synthetic": true,
+  "email": {
+    "from_name": "Aman Tiwari",
+    "from_email": "aman.tiwari@example.com",
+    "sent_at": "2026-10-17T10:05",
+    "subject": "Hospitalisation claim - HLT-26-10552",
+    "attachments": [
+      "discharge_summary.pdf",
+      "id_card.jpg"
+    ],
+    "body": "Dear claims team,\n\nI was admitted as an emergency to City Care Hospital, Bhopal, on 13 October 2026 with severe stomach pain, and had surgery for appendicitis the same night. I was discharged on 16 October 2026.\n\nThe total bill is about Rs 1,40,000. I have attached my discharge summary and my ID card. Policy HLT-26-10552.\n\nAman Tiwari\naman.tiwari@example.com | +91 90000 21212"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-17T10:05",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-17T12:05",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-17T14:05",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-17T15:05",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-17T16:05",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-18T10:05",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-19T10:05",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

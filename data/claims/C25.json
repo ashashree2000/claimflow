@@ -1,0 +1,72 @@
+{
+  "claim_id": "C25",
+  "synthetic": true,
+  "email": {
+    "from_name": "Rajesh Kumar",
+    "from_email": "rajesh.kumar@example.com",
+    "sent_at": "2026-11-09T12:00",
+    "subject": "Hospital claim - HLT-26-30087",
+    "attachments": [
+      "discharge_RK.pdf",
+      "final_bill_RK.pdf"
+    ],
+    "body": "Dear Sir/Madam,\n\nI bought this health policy recently; my cover started on 20 October 2026. On 4 November 2026 I developed a high fever and was admitted to Patliputra Care Hospital, Patna, through the emergency department. Tests showed typhoid, and I was discharged on 8 November 2026.\n\nThe bill is Rs 60,000. The discharge summary and the bill are attached.\n\nRajesh Kumar\nrajesh.kumar@example.com | 90000 25252"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-09T12:00",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-09T16:00",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-09T17:00",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-09T18:00",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-09T18:00",
+      "step": "Document requested: ID proof",
+      "document": "id_proof"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-10T12:00",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-11T12:00",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-11T12:00",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-11-11T12:00",
+      "step": "Document received: ID proof",
+      "document": "id_proof"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-11-12T12:00",
+      "step": "Document requested: ID proof",
+      "document": "id_proof"
+    }
+  ]
+}

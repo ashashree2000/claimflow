@@ -1,0 +1,77 @@
+{
+  "claim_id": "C15",
+  "synthetic": true,
+  "email": {
+    "from_name": "Thomas Mathew",
+    "from_email": "thomas.mathew@example.com",
+    "sent_at": "2026-10-26T17:35",
+    "subject": "Damp and leak in bedroom - PRP-26-33062",
+    "attachments": [
+      "ceiling_damp.jpg"
+    ],
+    "body": "Dear Sir/Madam,\n\nOn 25 October 2026 we noticed that the damp patches on the ceiling and walls of our upstairs bedroom in Kochi have spread a lot. The roof has a small leak that has been letting rain seep in slowly since the monsoon started in June. Now the paint is peeling and there is mould in one corner.\n\nA contractor looked at it and quoted Rs 40,000 to fix the roof and redo the plaster and paint. Photos are attached.\n\nThomas Mathew\nthomas.mathew@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-26T17:35",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-26T21:35",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-26T22:35",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-26T23:35",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-26T23:35",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-26T23:35",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-27T17:35",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-28T17:35",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-28T17:35",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-28T17:35",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-28T17:35",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "claim_id": "C01",
+  "synthetic": true,
+  "email": {
+    "from_name": "Rohan Mehta",
+    "from_email": "rohan.mehta@example.com",
+    "sent_at": "2026-10-13T09:40",
+    "subject": "Windscreen damage - policy MTR-26-10417",
+    "attachments": [
+      "windscreen_crack_1.jpg",
+      "DL_scan_RM.pdf"
+    ],
+    "body": "Hello,\n\nI'm writing to report damage to my car under policy MTR-26-10417. On 12 October 2026, while I was driving on the expressway near Lonavala, a stone thrown up by a truck hit the windscreen and it cracked right across the driver's side. Nobody was hurt and the rest of the car is fine.\n\nThe glass shop near my home quoted about Rs 18,000 to replace the windscreen. I've attached photos of the crack and a scan of my driving licence. Please let me know the next steps.\n\nRegards,\nRohan Mehta\nPhone: +91 90000 11223"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-13T09:40",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-13T13:40",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-13T14:40",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-13T15:40",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-13T15:40",
+      "step": "Document requested: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-13T15:40",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-14T09:40",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-15T09:40",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-15T09:40",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-15T09:40",
+      "step": "Document received: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-15T09:40",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "claim_id": "C06",
+  "synthetic": true,
+  "email": {
+    "from_name": "Priya Nair",
+    "from_email": "priya.nair@example.com",
+    "sent_at": "2026-10-25T08:50",
+    "subject": "Hailstorm damage to my car",
+    "attachments": [
+      "hail_dents.zip",
+      "DL_Priya.pdf",
+      "RC_Priya.pdf",
+      "dent_repair_quote.pdf"
+    ],
+    "body": "Hello,\n\nA hailstorm hit Shimla on the afternoon of 24 October 2026 while my car was parked outside my house. The hailstones left dents all over the roof and the bonnet, and one of the side mirrors is cracked.\n\nThe body shop has quoted Rs 45,000 for dent removal and repainting. I've attached photos, my driving licence, the registration certificate and the quote. Policy MTR-26-45530.\n\nThank you,\nPriya Nair\npriya.nair@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-25T08:50",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-25T10:50",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-25T12:50",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-25T13:50",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-25T14:50",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-26T08:50",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-27T08:50",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

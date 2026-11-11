@@ -1,0 +1,66 @@
+{
+  "claim_id": "C12",
+  "synthetic": true,
+  "email": {
+    "from_name": "Sanjay Gupta",
+    "from_email": "sanjay.gupta@example.com",
+    "sent_at": "2026-10-17T14:45",
+    "subject": "Burst pipe at home",
+    "attachments": [
+      "bathroom_bedroom.jpg",
+      "plumber_contractor_estimate.pdf"
+    ],
+    "body": "Hello,\n\nThis morning, 17 October 2026, a pipe under the bathroom basin in our house in Gomti Nagar, Lucknow, burst while we were at home. Water spread into the bedroom before we could shut the main valve.\n\nThe bathroom and bedroom flooring and the lower part of the bedroom wall are damaged. The plumber and the contractor together estimate Rs 65,000. Photos and their estimate are attached. My policy number is PRP-26-12907.\n\nSanjay Gupta\n+91 90000 13131"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-17T14:45",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-17T16:45",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-17T18:45",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-17T19:45",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-17T20:45",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-17T20:45",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-18T14:45",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-19T14:45",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-19T14:45",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    }
+  ]
+}

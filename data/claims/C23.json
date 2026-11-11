@@ -1,0 +1,71 @@
+{
+  "claim_id": "C23",
+  "synthetic": true,
+  "email": {
+    "from_name": "Kunal Shah",
+    "from_email": "kunal.shah@example.com",
+    "sent_at": "2026-10-23T16:20",
+    "subject": "Claim for surgery - HLT-26-19364",
+    "attachments": [
+      "aura_discharge.pdf",
+      "aura_invoice.pdf"
+    ],
+    "body": "Hi,\n\nI had nose reshaping surgery (rhinoplasty) at Aura Aesthetic Clinic, Mumbai, on 19 October 2026 and stayed in for one night. I had been unhappy with the shape of my nose for years. There was no injury and no breathing problem behind it.\n\nThe bill is Rs 1,50,000. The discharge summary and the invoice are attached.\n\nKunal Shah\nkunal.shah@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-23T16:20",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-23T18:20",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-23T20:20",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-23T21:20",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-23T22:20",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-23T22:20",
+      "step": "Document requested: ID proof",
+      "document": "id_proof"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-24T16:20",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-24T18:20",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-25T16:20",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-25T16:20",
+      "step": "Document received: ID proof",
+      "document": "id_proof"
+    }
+  ]
+}

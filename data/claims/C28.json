@@ -1,0 +1,66 @@
+{
+  "claim_id": "C28",
+  "synthetic": true,
+  "email": {
+    "from_name": "Suresh Pandey",
+    "from_email": "suresh.pandey@example.com",
+    "sent_at": "2026-10-31T11:15",
+    "subject": "Emergency admission - HLT-26-47716",
+    "attachments": [
+      "ganga_bill.pdf",
+      "id_SP.jpg"
+    ],
+    "body": "Hello,\n\nI have had high blood pressure since early 2023 and take tablets for it every day. I took out this policy on 10 April 2025.\n\nOn 28 October 2026 my blood pressure shot up very high with a severe headache, and I was admitted through the emergency department at Ganga Hospital, Kanpur, for three days. The bill is Rs 95,000. The bill and my ID are attached; the discharge summary will follow.\n\nSuresh Pandey\n+91 90000 27272"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-31T11:15",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-31T13:15",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-31T15:15",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-31T16:15",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-31T17:15",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-31T17:15",
+      "step": "Document requested: discharge summary",
+      "document": "discharge_summary"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-01T11:15",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-02T11:15",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-11-06T11:15",
+      "step": "Document received: discharge summary",
+      "document": "discharge_summary"
+    }
+  ]
+}

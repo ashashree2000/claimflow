@@ -1,0 +1,84 @@
+{
+  "claim_id": "C03",
+  "synthetic": true,
+  "email": {
+    "from_name": "Arjun Malhotra",
+    "from_email": "arjun.malhotra@example.com",
+    "sent_at": "2026-10-19T11:20",
+    "subject": "Accident last night",
+    "attachments": [
+      "IMG_4471.jpg",
+      "estimate_AM.pdf"
+    ],
+    "body": "Hi,\n\nI need to report an accident from last night, 18 October 2026, on Golf Course Road in Gurugram. I was driving back from a friend's birthday party at around 1 am and ran into the back of a truck that was standing on the road. Nobody was hurt.\n\nThe traffic police did a breath test at the scene and the reading was above the legal limit, and they issued a challan. The front of my car is badly damaged and the workshop estimate is Rs 1,20,000. Photos and the estimate are attached. My policy number is MTR-26-20981.\n\nArjun Malhotra\n+91 90000 33445"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-19T11:20",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-19T13:20",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-19T15:20",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-19T16:20",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-19T17:20",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-19T17:20",
+      "step": "Document requested: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-19T17:20",
+      "step": "Document requested: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-20T11:20",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-21T11:20",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-21T11:20",
+      "step": "Document received: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-21T11:20",
+      "step": "Document received: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E12",
+      "timestamp": "2026-10-22T11:20",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

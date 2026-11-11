@@ -1,0 +1,71 @@
+{
+  "claim_id": "C30",
+  "synthetic": true,
+  "email": {
+    "from_name": "Karthik Subramanian",
+    "from_email": "karthik.subramanian@example.com",
+    "sent_at": "2026-11-04T07:30",
+    "subject": "Hospitalised while on holiday",
+    "attachments": [
+      "bangkok_discharge.pdf",
+      "passport_scan.pdf"
+    ],
+    "body": "Hello,\n\nWhile on holiday in Bangkok, I was admitted through the emergency department of a private hospital on 1 November 2026 with severe food poisoning and dehydration. I stayed for two days and flew home to Chennai on 4 November.\n\nThe bill comes to about Rs 1,20,000 after conversion. I've attached the discharge summary and my ID; the itemised bill will follow. Policy HLT-26-58834.\n\nKarthik Subramanian\n+91 90000 28282"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-04T07:30",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-04T09:30",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-04T11:30",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-04T12:30",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-04T13:30",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-04T13:30",
+      "step": "Document requested: itemised hospital bill",
+      "document": "itemised_bill"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-05T07:30",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-05T09:30",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-11-06T07:30",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-11-10T07:30",
+      "step": "Document received: itemised hospital bill",
+      "document": "itemised_bill"
+    }
+  ]
+}

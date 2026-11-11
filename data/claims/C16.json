@@ -1,0 +1,66 @@
+{
+  "claim_id": "C16",
+  "synthetic": true,
+  "email": {
+    "from_name": "Harpreet Kaur",
+    "from_email": "harpreet.kaur@example.com",
+    "sent_at": "2026-10-28T08:20",
+    "subject": "Storm damage to roof",
+    "attachments": [
+      "roof_sheets.zip",
+      "roofing_quote.pdf"
+    ],
+    "body": "Hello,\n\nDuring the storm on the night of 27 October 2026, strong winds tore off six of the roof sheets over the back of our house in Mohali and broke the cover of the water tank on the roof.\n\nWe have put a tarpaulin over the gap for now. The roofer has quoted Rs 90,000 for new sheets and the tank cover. Photos and the quote are attached. Policy PRP-26-38841.\n\nHarpreet Kaur\n+91 90000 15151"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-28T08:20",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-28T10:20",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-28T12:20",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-28T13:20",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-28T14:20",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-28T14:20",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-29T08:20",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-30T08:20",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-30T08:20",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    }
+  ]
+}

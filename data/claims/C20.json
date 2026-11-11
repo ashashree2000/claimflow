@@ -1,0 +1,77 @@
+{
+  "claim_id": "C20",
+  "synthetic": true,
+  "email": {
+    "from_name": "Rekha Pillai",
+    "from_email": "rekha.pillai@example.com",
+    "sent_at": "2026-10-27T18:00",
+    "subject": "Cracks in walls - PRP-26-60978",
+    "attachments": [
+      "wall_cracks.zip"
+    ],
+    "body": "Hello,\n\nOur neighbour in Mysuru began digging the foundations for a new building next to our house around 20 October 2026, using heavy machinery. On 26 October 2026 we noticed long cracks in two walls of our living room and in the compound wall, and one door no longer closes properly.\n\nA contractor estimates Rs 75,000 to repair the cracks. Photos are attached.\n\nRekha Pillai\n+91 90000 18181"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-27T18:00",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-27T20:00",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-27T22:00",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-27T23:00",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-28T00:00",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-28T00:00",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-28T00:00",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-28T18:00",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-29T18:00",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-29T18:00",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-11-02T18:00",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "claim_id": "C10",
+  "synthetic": true,
+  "email": {
+    "from_name": "Deepak Rao",
+    "from_email": "deepak.rao@example.com",
+    "sent_at": "2026-10-30T19:10",
+    "subject": "Claim",
+    "attachments": [],
+    "body": "Hi, my car has been damaged and I need to make a claim as soon as possible. Policy number MTR-26-71590. Please call me back.\n\nDeepak Rao\n+91 90000 55667"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-30T19:10",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-30T21:10",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-30T23:10",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-31T00:10",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-31T01:10",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-31T01:10",
+      "step": "Document requested: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-31T01:10",
+      "step": "Document requested: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-31T01:10",
+      "step": "Document requested: damage photos",
+      "document": "damage_photos"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-31T01:10",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-31T19:10",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-11-01T19:10",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E12",
+      "timestamp": "2026-11-01T19:10",
+      "step": "Document received: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E13",
+      "timestamp": "2026-11-01T19:10",
+      "step": "Document received: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E14",
+      "timestamp": "2026-11-01T19:10",
+      "step": "Document received: damage photos",
+      "document": "damage_photos"
+    },
+    {
+      "event_id": "E15",
+      "timestamp": "2026-11-01T19:10",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E16",
+      "timestamp": "2026-11-02T19:10",
+      "step": "Document requested: damage photos",
+      "document": "damage_photos"
+    }
+  ]
+}

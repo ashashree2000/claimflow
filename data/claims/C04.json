@@ -1,0 +1,78 @@
+{
+  "claim_id": "C04",
+  "synthetic": true,
+  "email": {
+    "from_name": "Sneha Kulkarni",
+    "from_email": "sneha.kulkarni@example.com",
+    "sent_at": "2026-10-21T10:15",
+    "subject": "Engine failure - MTR-26-31152",
+    "attachments": [
+      "service_centre_estimate.pdf",
+      "rc_copy.jpg"
+    ],
+    "body": "Hello,\n\nMy car's engine stopped suddenly on 20 October 2026 while I was driving on the highway near Nashik. There was no accident and no warning light came on before it happened.\n\nThe car was towed to the authorised service centre. They say the engine has seized because of an internal failure, and the repair will cost about Rs 60,000. I've attached their estimate and my registration certificate. Policy number MTR-26-31152.\n\nSneha Kulkarni\nsneha.k@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-21T10:15",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-21T12:15",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-21T13:15",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-21T14:15",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-21T15:15",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-21T16:15",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-21T16:15",
+      "step": "Document requested: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-21T16:15",
+      "step": "Document requested: damage photos",
+      "document": "damage_photos"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-23T10:15",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-23T10:15",
+      "step": "Document received: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-23T10:15",
+      "step": "Document received: damage photos",
+      "document": "damage_photos"
+    }
+  ]
+}

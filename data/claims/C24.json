@@ -1,0 +1,72 @@
+{
+  "claim_id": "C24",
+  "synthetic": true,
+  "email": {
+    "from_name": "Neha Saxena",
+    "from_email": "neha.saxena@example.com",
+    "sent_at": "2026-10-25T09:45",
+    "subject": "Reimbursement for back pain treatment",
+    "attachments": [
+      "clinic_lab_bills.pdf",
+      "id_NS.jpg"
+    ],
+    "body": "Hello,\n\nOn 24 October 2026 I visited an orthopaedic doctor at Lotus Clinic, Pune, for lower back pain. He ordered an MRI and blood tests and prescribed medicines. I was not admitted.\n\nThe total came to Rs 9,000. The bills and my ID are attached. Policy HLT-26-24418.\n\nNeha Saxena\n+91 90000 24242"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-25T09:45",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-25T11:45",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-25T13:45",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-25T14:45",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-25T15:45",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-25T15:45",
+      "step": "Document requested: discharge summary",
+      "document": "discharge_summary"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-26T09:45",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-27T09:45",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-27T09:45",
+      "step": "Document received: discharge summary",
+      "document": "discharge_summary"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-28T09:45",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

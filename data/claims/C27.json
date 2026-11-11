@@ -1,0 +1,55 @@
+{
+  "claim_id": "C27",
+  "synthetic": true,
+  "email": {
+    "from_name": "Ishita Banerjee",
+    "from_email": "ishita.banerjee@example.com",
+    "sent_at": "2026-11-03T14:30",
+    "subject": "Dengue hospitalisation claim",
+    "attachments": [
+      "dengue_discharge.pdf",
+      "dengue_bill.pdf",
+      "ID_IB.jpg"
+    ],
+    "body": "Dear claims team,\n\nI was admitted to Brahmaputra Hospital, Guwahati, through the emergency department on 29 October 2026 with dengue fever and a falling platelet count. I stayed for four days and was discharged on 2 November 2026.\n\nThe bill is Rs 85,000. The discharge summary, the itemised bill and my ID are attached. Policy HLT-26-40263.\n\nIshita Banerjee\nishita.banerjee@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-03T14:30",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-03T16:30",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-03T18:30",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-03T19:30",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-03T20:30",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-04T14:30",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-05T14:30",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

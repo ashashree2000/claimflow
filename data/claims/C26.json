@@ -1,0 +1,55 @@
+{
+  "claim_id": "C26",
+  "synthetic": true,
+  "email": {
+    "from_name": "Gopal Menon",
+    "from_email": "gopal.menon@example.com",
+    "sent_at": "2026-11-02T10:10",
+    "subject": "Claim for hip fracture treatment",
+    "attachments": [
+      "ortho_discharge.pdf",
+      "ortho_bill.pdf",
+      "id_GM.pdf"
+    ],
+    "body": "Hello,\n\nOn 27 October 2026 I slipped on the stairs at home in Kozhikode and fractured my hip. An ambulance took me to Malabar Bone and Joint Hospital, where I had surgery and stayed for five days.\n\nThe hospital bill is Rs 2,80,000 and the ambulance charged Rs 2,500. I have attached the discharge summary, the itemised bill (which includes the ambulance receipt) and my ID. Policy HLT-26-35541.\n\nGopal Menon\n+91 90000 26262"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-02T10:10",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-02T12:10",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-02T13:10",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-02T14:10",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-02T15:10",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-02T16:10",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-04T10:10",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

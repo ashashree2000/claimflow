@@ -9,3 +9,7 @@ chroma_db/
 .pytest_cache/
 .ruff_cache/
 .streamlit/secrets.toml
+
+# Separate reference project, never commit
+ProcessDNA/
+.DS_Store

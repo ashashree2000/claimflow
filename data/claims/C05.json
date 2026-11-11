@@ -1,0 +1,66 @@
+{
+  "claim_id": "C05",
+  "synthetic": true,
+  "email": {
+    "from_name": "Imran Shaikh",
+    "from_email": "imran.shaikh@example.com",
+    "sent_at": "2026-10-22T20:30",
+    "subject": "Reporting an incident with a parked scooter",
+    "attachments": [
+      "scooter_photos.jpg",
+      "my_DL.pdf"
+    ],
+    "body": "Dear Sir/Madam,\n\nWhile reversing out of a parking spot at a shopping mall in Banjara Hills, Hyderabad, this afternoon (22 October 2026), I hit a parked scooter and knocked it over. My own car only has a small scratch that I am not claiming for.\n\nThe scooter's owner has shown me a quote of Rs 22,000 for repairing his scooter. I have not agreed to pay him anything and told him I would inform my insurer. Photos of the scooter and my driving licence are attached. My policy is MTR-26-40276.\n\nRegards,\nImran Shaikh\nMobile: 90000 44556"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-22T20:30",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-22T22:30",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-23T00:30",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-23T01:30",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-23T02:30",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-23T02:30",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-23T20:30",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-24T20:30",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-24T20:30",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "claim_id": "C18",
+  "synthetic": true,
+  "email": {
+    "from_name": "Pooja Agarwal",
+    "from_email": "pooja.agarwal@example.com",
+    "sent_at": "2026-10-31T10:40",
+    "subject": "Rainwater entered our house - PRP-26-51327",
+    "attachments": [
+      "ground_floor_water.zip"
+    ],
+    "body": "Hello,\n\nAfter very heavy rain on 30 October 2026 the drains on our lane in Thane overflowed and rainwater rose about a foot inside the ground floor of our house. The water stayed for most of the night.\n\nThe wooden flooring has lifted and the lower part of the walls needs re-plastering and painting. We moved our furniture upstairs in time. A contractor has estimated around Rs 2,40,000 and will send the written estimate. Photos are attached.\n\nPooja Agarwal\n+91 90000 17171"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-31T10:40",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-31T12:40",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-31T14:40",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-31T15:40",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-31T16:40",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-31T16:40",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-01T10:40",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-02T10:40",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-11-02T10:40",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    }
+  ]
+}

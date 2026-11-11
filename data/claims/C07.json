@@ -1,0 +1,83 @@
+{
+  "claim_id": "C07",
+  "synthetic": true,
+  "email": {
+    "from_name": "Vikram Singh",
+    "from_email": "vikram.singh@example.com",
+    "sent_at": "2026-10-27T13:05",
+    "subject": "Accident at a junction - MTR-26-52318",
+    "attachments": [
+      "side_damage.jpg",
+      "estimate_VS.pdf"
+    ],
+    "body": "Hi,\n\nOn 26 October 2026 at about 8 pm another car jumped the signal at a junction in Malviya Nagar, Jaipur, and struck the right side of my car. I wasn't hurt.\n\nIn the evenings I drive for a food-ordering app to earn some extra money, and at the time I was on my way to a customer with an order the app had assigned to me. The right doors and the pillar are damaged and the estimate is Rs 70,000. Photos and the estimate are attached. Policy MTR-26-52318.\n\nVikram Singh\n+91 90000 66778"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-27T13:05",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-27T15:05",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-27T17:05",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-27T18:05",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-27T19:05",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-27T19:05",
+      "step": "Document requested: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-27T19:05",
+      "step": "Document requested: registration certificate",
+      "document": "registration_certificate"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-28T13:05",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-28T15:05",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-29T13:05",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-29T13:05",
+      "step": "Document received: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E12",
+      "timestamp": "2026-10-29T13:05",
+      "step": "Document received: registration certificate",
+      "document": "registration_certificate"
+    }
+  ]
+}

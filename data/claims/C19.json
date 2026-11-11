@@ -1,0 +1,66 @@
+{
+  "claim_id": "C19",
+  "synthetic": true,
+  "email": {
+    "from_name": "Aditya Kapoor",
+    "from_email": "aditya.kapoor@example.com",
+    "sent_at": "2026-11-03T15:15",
+    "subject": "Basement store room soaked",
+    "attachments": [
+      "basement_items.jpg",
+      "purchase_bills.pdf"
+    ],
+    "body": "Dear Sir/Madam,\n\nHeavy rain on 2 November 2026 sent surface water pouring down the ramp into the basement of our house in Sector 50, Noida. We use the basement as a store room. A sofa set, two mattresses and several cartons of books and winter clothes were soaked through and are ruined.\n\nThe building itself was fine once the water was pumped out. The items were worth about Rs 1,10,000. Photos and the purchase bills are attached. Policy PRP-26-56602.\n\nAditya Kapoor\naditya.kapoor@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-03T15:15",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-03T17:15",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-03T18:15",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-03T19:15",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-03T20:15",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-03T21:15",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-03T21:15",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-05T15:15",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-11-05T15:15",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    }
+  ]
+}

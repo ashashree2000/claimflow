@@ -1,0 +1,89 @@
+{
+  "claim_id": "C14",
+  "synthetic": true,
+  "email": {
+    "from_name": "Lakshmi Reddy",
+    "from_email": "lakshmi.reddy@example.com",
+    "sent_at": "2026-10-24T12:10",
+    "subject": "Missing jewellery",
+    "attachments": [
+      "complaint_copy.pdf"
+    ],
+    "body": "Hello,\n\nOn 23 October 2026 I noticed that two gold bangles and a necklace were missing from the steel cupboard in our bedroom in Adyar, Chennai. The cupboard and the doors were not broken and nothing else in the house was disturbed. Only our family and our domestic help have keys to the house.\n\nI have filed a complaint at the local police station (copy attached). The jewellery is worth about Rs 1,50,000. Policy PRP-26-27718.\n\nLakshmi Reddy\n+91 90000 14141"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-24T12:10",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-24T14:10",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-24T16:10",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-24T17:10",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-24T18:10",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-24T18:10",
+      "step": "Document requested: damage photos",
+      "document": "damage_photos"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-24T18:10",
+      "step": "Document requested: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-24T18:10",
+      "step": "Document requested: proof of ownership",
+      "document": "proof_of_ownership"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-25T12:10",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E10",
+      "timestamp": "2026-10-26T12:10",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E11",
+      "timestamp": "2026-10-26T12:10",
+      "step": "Document received: damage photos",
+      "document": "damage_photos"
+    },
+    {
+      "event_id": "E12",
+      "timestamp": "2026-10-26T12:10",
+      "step": "Document received: repair estimate",
+      "document": "repair_estimate"
+    },
+    {
+      "event_id": "E13",
+      "timestamp": "2026-10-30T12:10",
+      "step": "Document received: proof of ownership",
+      "document": "proof_of_ownership"
+    }
+  ]
+}

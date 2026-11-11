@@ -1,0 +1,55 @@
+{
+  "claim_id": "C09",
+  "synthetic": true,
+  "email": {
+    "from_name": "Rahul Deshpande",
+    "from_email": "rahul.deshpande@example.com",
+    "sent_at": "2026-10-29T09:25",
+    "subject": "Accident claim - MTR-26-68203",
+    "attachments": [
+      "left_side.jpg",
+      "RC.jpg",
+      "garage_estimate.pdf"
+    ],
+    "body": "Hello,\n\nI'm reporting an accident on 28 October 2026 on the Western Express Highway in Mumbai, near Goregaon. A tempo changed lanes without signalling and hit the left side of my car.\n\nI was driving three colleagues to our office, as I do every weekday. They each chip in for the petrol and the toll, and I don't earn anything from it. None of us was injured. The left doors and mirror are damaged and the garage estimate is Rs 95,000. I've attached photos, the RC and the estimate.\n\nRahul Deshpande\n+91 90000 77889"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-29T09:25",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-29T13:25",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-29T14:25",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-29T15:25",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-30T09:25",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-31T09:25",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-31T09:25",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

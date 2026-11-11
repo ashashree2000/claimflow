@@ -1,0 +1,55 @@
+{
+  "claim_id": "C22",
+  "synthetic": true,
+  "email": {
+    "from_name": "Savitri Devi",
+    "from_email": "savitri.devi@example.com",
+    "sent_at": "2026-10-22T11:30",
+    "subject": "Cataract surgery claim",
+    "attachments": [
+      "discharge_note.pdf",
+      "bill.pdf",
+      "id.pdf"
+    ],
+    "body": "Hello,\n\nI had cataract surgery on my right eye at Netra Eye Centre, Varanasi, on 21 October 2026 and went home the same afternoon. The bill came to Rs 35,000.\n\nI have attached the discharge note, the hospital bill and my ID. My policy number is HLT-26-11709.\n\nSavitri Devi\n+91 90000 23232"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-22T11:30",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-22T13:30",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-22T15:30",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-22T16:30",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-22T17:30",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-23T11:30",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-24T11:30",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

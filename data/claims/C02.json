@@ -1,0 +1,56 @@
+{
+  "claim_id": "C02",
+  "synthetic": true,
+  "email": {
+    "from_name": "Kavya Iyer",
+    "from_email": "kavya.iyer@example.com",
+    "sent_at": "2026-10-16T18:05",
+    "subject": "Accident claim for policy MTR-26-11862",
+    "attachments": [
+      "front_damage.zip",
+      "licence.pdf",
+      "RC.pdf",
+      "workshop_estimate.pdf"
+    ],
+    "body": "Dear claims team,\n\nOn the evening of 15 October 2026 it was raining heavily on Outer Ring Road in Bengaluru, near Marathahalli. My car skidded on the wet road and hit the road divider. I was driving alone and was not injured.\n\nThe front bumper, bonnet and left headlamp are damaged. The workshop has estimated Rs 85,000 for the repairs. I have attached photos of the damage, my driving licence, the registration certificate and the workshop's estimate.\n\nThanks,\nKavya Iyer\nkavya.iyer@example.com | +91 90000 22334"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-16T18:05",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-16T20:05",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-16T22:05",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-16T23:05",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-17T00:05",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-17T18:05",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-18T18:05",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

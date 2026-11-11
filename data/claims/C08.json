@@ -1,0 +1,66 @@
+{
+  "claim_id": "C08",
+  "synthetic": true,
+  "email": {
+    "from_name": "Ananya Bose",
+    "from_email": "ananya.bose@example.com",
+    "sent_at": "2026-10-24T16:40",
+    "subject": "My car has been stolen",
+    "attachments": [
+      "FIR_copy.pdf",
+      "RC_AB.pdf"
+    ],
+    "body": "Dear claims team,\n\nMy car was stolen from outside my building in Salt Lake, Kolkata. I parked it there on the night of 18 October 2026 and found it missing when I came down on the morning of 19 October 2026.\n\nAt first I thought it had been towed, so I spent a few days checking with the towing yards and asking the neighbours. I went to the police station on 23 October 2026 and they registered an FIR. A copy of the FIR and my registration certificate are attached. My policy is MTR-26-60744. The car is about three years old.\n\nAnanya Bose\nananya.bose@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-24T16:40",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-24T18:40",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-24T20:40",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-24T21:40",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-24T22:40",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-24T22:40",
+      "step": "Document requested: driving licence",
+      "document": "driving_licence"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-25T16:40",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-10-26T16:40",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E9",
+      "timestamp": "2026-10-30T16:40",
+      "step": "Document received: driving licence",
+      "document": "driving_licence"
+    }
+  ]
+}

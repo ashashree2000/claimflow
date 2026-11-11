@@ -1,0 +1,54 @@
+{
+  "claim_id": "C29",
+  "synthetic": true,
+  "email": {
+    "from_name": "Usha Rani",
+    "from_email": "usha.rani@example.com",
+    "sent_at": "2026-11-08T10:50",
+    "subject": "Knee replacement claim",
+    "attachments": [
+      "knee_discharge.pdf",
+      "knee_bill.pdf"
+    ],
+    "body": "Dear Sir/Madam,\n\nMy doctor diagnosed osteoarthritis in my right knee in 2022, and I have been on painkillers and physiotherapy since then. I have had this policy since 1 September 2024.\n\nOn 3 November 2026 I was admitted to Seaside Ortho Hospital, Visakhapatnam, for a planned knee replacement, and I was discharged on 7 November 2026. The bill is Rs 3,20,000. The discharge summary and the bill are attached. Policy HLT-26-52809.\n\nUsha Rani\nusha.rani@example.com"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-11-08T10:50",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-11-08T12:50",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-11-08T14:50",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-11-08T15:50",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-11-08T16:50",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-11-09T10:50",
+      "step": "Medical reviewer assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-11-10T10:50",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    }
+  ]
+}

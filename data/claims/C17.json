@@ -1,0 +1,61 @@
+{
+  "claim_id": "C17",
+  "synthetic": true,
+  "email": {
+    "from_name": "Nikhil Verma",
+    "from_email": "nikhil.verma@example.com",
+    "sent_at": "2026-10-29T11:55",
+    "subject": "Water damage found after returning home",
+    "attachments": [
+      "ceiling_living_room.jpg",
+      "repair_estimate.pdf",
+      "sofa_invoice.pdf"
+    ],
+    "body": "Dear claims team,\n\nMy wife and I were away from 10 September to 28 October 2026 visiting our son in Toronto, and nobody stayed in our house in Indore during that time. When we got back on 28 October, we found that a pipe in the upstairs bathroom had burst and water had come through the ceiling into the living room.\n\nThe ceiling, the floor and the sofa set are damaged. The estimate is Rs 1,80,000. Photos, the estimate and the sofa's purchase invoice are attached. Policy PRP-26-44190.\n\nNikhil Verma\nnikhil.verma@example.com | 90000 16161"
+  },
+  "events": [
+    {
+      "event_id": "E1",
+      "timestamp": "2026-10-29T11:55",
+      "step": "FNOL received"
+    },
+    {
+      "event_id": "E2",
+      "timestamp": "2026-10-29T13:55",
+      "step": "Acknowledgement sent"
+    },
+    {
+      "event_id": "E3",
+      "timestamp": "2026-10-29T15:55",
+      "step": "Policy status verified"
+    },
+    {
+      "event_id": "E4",
+      "timestamp": "2026-10-29T16:55",
+      "step": "Coverage check completed"
+    },
+    {
+      "event_id": "E5",
+      "timestamp": "2026-10-29T17:55",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E6",
+      "timestamp": "2026-10-30T11:55",
+      "step": "Surveyor assigned"
+    },
+    {
+      "event_id": "E7",
+      "timestamp": "2026-10-31T11:55",
+      "step": "Document received: claim form",
+      "document": "claim_form"
+    },
+    {
+      "event_id": "E8",
+      "timestamp": "2026-11-01T11:55",
+      "step": "Document requested: claim form",
+      "document": "claim_form"
+    }
+  ]
+}
