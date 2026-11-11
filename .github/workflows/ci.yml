@@ -13,3 +13,13 @@ jobs:
       - run: ruff check .
       - run: python data/check_dataset.py
       - run: pytest -q
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: docker build -t claimflow-api .
+      - name: Start the container and call /health (no API key needed)
+        run: |
+          docker run -d --name api -p 8000:8000 claimflow-api
+          for i in $(seq 1 30); do curl -sf localhost:8000/health && exit 0; sleep 2; done
+          docker logs api; exit 1

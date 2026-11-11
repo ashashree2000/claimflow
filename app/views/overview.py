@@ -12,24 +12,30 @@ st.markdown(
     "or rejects it, and every decision is logged."
 )
 
-st.graphviz_chart("""
-digraph {
-  rankdir=LR; bgcolor="transparent";
-  node [shape=box style="rounded,filled" fillcolor="#eef2f7" color="#8aa0b8" fontname="Helvetica" fontsize=11];
-  edge [color="#8aa0b8"];
-  email [label="Claim email\\n+ handling history"];
-  intake [label="Intake agent\\nextracts the facts"];
-  router [label="Router\\npicks the policy type"];
-  cov [label="Coverage agent\\nchecks policy clauses"];
-  proc [label="Process agent\\nchecks the procedures"];
-  graph [label="Policy clause graph\\n(follows cross-references)" fillcolor="#fff6e5"];
-  sup [label="Recommendation\\nwith citations"];
-  human [label="Claims handler\\napproves or rejects" fillcolor="#e8f5e9"];
-  log [label="Review log" shape=cylinder];
-  email -> intake -> router; router -> cov; router -> proc; graph -> cov;
-  cov -> sup; proc -> sup; sup -> human -> log;
-}
-""")
+FLOW = """
+<style>
+.cf{display:flex;align-items:stretch;gap:6px;flex-wrap:wrap;font-family:inherit;font-size:13px;margin:8px 0 4px}
+.cf .b{border:1px solid rgba(128,128,128,.45);border-radius:8px;padding:8px 10px;background:rgba(128,128,128,.08);
+       display:flex;flex-direction:column;justify-content:center;min-width:110px}
+.cf .b b{font-size:13px}.cf .b span{opacity:.75;font-size:12px}
+.cf .a{align-self:center;opacity:.6;font-size:18px}
+.cf .col{display:flex;flex-direction:column;gap:6px}
+.cf .g{border-style:dashed}.cf .h{background:rgba(46,160,67,.15);border-color:rgba(46,160,67,.6)}
+</style>
+<div class="cf">
+ <div class="b"><b>Claim email</b><span>+ handling history</span></div><div class="a">&rarr;</div>
+ <div class="b"><b>Intake agent</b><span>extracts the facts</span></div><div class="a">&rarr;</div>
+ <div class="b"><b>Router</b><span>picks the policy type</span></div><div class="a">&rarr;</div>
+ <div class="col">
+   <div class="b"><b>Coverage agent</b><span>checks policy clauses, using the<br>clause graph to follow references</span></div>
+   <div class="b"><b>Process agent</b><span>checks the handling history<br>against the procedures</span></div>
+ </div><div class="a">&rarr;</div>
+ <div class="b"><b>Recommendation</b><span>with cited clauses</span></div><div class="a">&rarr;</div>
+ <div class="b h"><b>Claims handler</b><span>approves or rejects;<br>logged</span></div>
+</div>
+"""
+st.html(FLOW)
+
 
 r = results()
 if r:
@@ -44,7 +50,8 @@ if r:
     c1.metric("Coverage decisions correct", f"{g} of {n}", f"{g - v:+d} vs similarity search only")
     c2.metric("Claims that need a cross-reference", f"{xg} of {len(xr)}", f"{xg - xv:+d} vs similarity search only")
     c3.metric("Handling problems found", f"{m['process_flags_matched']} of {m['process_flags_gold']}",
-              f"{m['process_flags_predicted'] - m['process_flags_matched']} false alarms", delta_color="off")
+              help=f"{m['process_flags_predicted'] - m['process_flags_matched']} of the "
+                   f"{m['process_flags_predicted']} problems it reported were false alarms.")
     st.caption(f"Measured on {n} test claims with known answers. The Evaluation page has the full results.")
 
 st.subheader("Try it")

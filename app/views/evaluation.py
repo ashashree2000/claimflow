@@ -13,11 +13,11 @@ st.markdown(
     "the handling problems hidden in its history. Each claim was run through the full system once with each way "
     "of finding policy clauses, and the answers were scored automatically."
 )
-c1, c2, c3, c4 = st.columns(4)
-c1.metric("Test claims", "30", "10 motor, 10 home, 10 health", delta_color="off")
-c2.metric("Need a cross-reference", "8", "e.g. an exclusion changed by an endorsement", delta_color="off")
-c3.metric("Should go to a handler", "3", "unclear or conflicting facts", delta_color="off")
-c4.metric("Hidden handling problems", "28", "6 claims have none", delta_color="off")
+st.markdown(
+    "**The test set:** 30 claims (10 motor, 10 home, 10 health). 8 can only be decided by following a "
+    "cross-reference, for example an exclusion changed by an endorsement. 3 have unclear or conflicting facts and "
+    "should be referred to a handler. 28 handling problems are hidden in the histories; 6 claims have none."
+)
 
 modes = [m for m in ("graph", "vector_wide", "vector") if m in r["metrics"]]
 M = r["metrics"]
