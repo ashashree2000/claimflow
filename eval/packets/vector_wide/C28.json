@@ -1,0 +1,83 @@
+{
+  "packet_id": "01ae9c0a3d93",
+  "claim_id": "C28",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:43:39+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Suresh Pandey",
+    "policy_number": "HLT-26-47716",
+    "line_of_business": "health",
+    "incident_date": "2026-10-28",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted through the emergency department at a hospital for three days due to high blood pressure and a severe headache, incurring a bill of Rs 95,000.",
+    "location": "Kanpur",
+    "documents_attached": [
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "medium",
+    "severity_reason": "The claim involves an emergency hospital admission, and while it involves an emergency, the rule states severity is high if it involves an emergency hospital admission OR an estimated loss of Rs 5,00,000 or more. Wait, let's re-read the rule: 'Severity is high if the claim involves bodily injury, theft of a vehicle, fire, an emergency hospital admission, or an estimated loss of Rs 5,00,000 or more.' Therefore, emergency hospital admission means severity is high."
+  },
+  "documents_missing": [
+    "claim_form",
+    "discharge_summary"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-47716 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claimant has submitted an itemized bill and ID proof, but explicitly states that the discharge summary will follow. Under clause HLTH-CON-5.2, claims must be supported by the original discharge summary and itemized hospital bill. Because the required discharge summary has not yet been provided, the claim facts are missing necessary documentation to fully process, requiring human review.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-DEF-1.1",
+      "HLTH-COV-2",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2.4",
+      "HLTH-LIM-3.2",
+      "HLTH-CON-5.1",
+      "HLTH-EXC-4",
+      "HLTH-EXC-4.3",
+      "HLTH-CON-5",
+      "HLTH-COV-2.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E4",
+          "E5",
+          "E6",
+          "E7"
+        ],
+        "sop_id": "SOP-DOC-1.1",
+        "fix": "Request all missing documents in one consolidated message immediately after the coverage check is completed, rather than sending separate requests."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "intake output needed one retry to pass validation",
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

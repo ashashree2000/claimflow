@@ -1,0 +1,567 @@
+{
+  "top_k": 5,
+  "hops": 2,
+  "embed_model": "gemini-embedding-001",
+  "rows": [
+    {
+      "claim_id": "C01",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-COV-2.4"
+      ],
+      "vector_top_k": [
+        "MOTOR-LIM-3.2",
+        "MOTOR-CON-5.1",
+        "MOTOR-LIM-3.1",
+        "MOTOR-COV-2.4",
+        "MOTOR-COV-2"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 15,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C02",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-COV-2.1"
+      ],
+      "vector_top_k": [
+        "MOTOR-LIM-3.1",
+        "MOTOR-LIM-3.2",
+        "MOTOR-CON-5.1",
+        "MOTOR-COV-2",
+        "MOTOR-LIM-3.3"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 15,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C03",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-EXC-4.3"
+      ],
+      "vector_top_k": [
+        "MOTOR-CON-5.1",
+        "MOTOR-LIM-3.3",
+        "MOTOR-LIM-3.1",
+        "MOTOR-EXC-4.3",
+        "MOTOR-COV-2.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 17,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C04",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-EXC-4.4"
+      ],
+      "vector_top_k": [
+        "MOTOR-EXC-4.4",
+        "MOTOR-CON-5.1",
+        "MOTOR-COV-2",
+        "MOTOR-LIM-3.1",
+        "MOTOR-EXC-4"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 14,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C05",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-COV-2.3"
+      ],
+      "vector_top_k": [
+        "MOTOR-LIM-3.1",
+        "MOTOR-LIM-3.3",
+        "MOTOR-LIM-3.2",
+        "MOTOR-CON-5.1",
+        "MOTOR-COV-2.1"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 16,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C06",
+      "cross_reference": false,
+      "gold": [
+        "MOTOR-COV-2.5"
+      ],
+      "vector_top_k": [
+        "MOTOR-COV-2.5",
+        "MOTOR-CON-5.1",
+        "MOTOR-LIM-3.1",
+        "MOTOR-LIM-3.2",
+        "MOTOR-COV-2.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 16,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C07",
+      "cross_reference": true,
+      "gold": [
+        "MOTOR-COV-2.1",
+        "MOTOR-DEF-1.3",
+        "MOTOR-EXC-4.2"
+      ],
+      "vector_top_k": [
+        "MOTOR-LIM-3.1",
+        "MOTOR-LIM-3.3",
+        "MOTOR-CON-5.1",
+        "MOTOR-COV-2.1",
+        "MOTOR-COV-2"
+      ],
+      "vector_recall": 0.333,
+      "graph_recall": 0.667,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 15,
+      "missing_after_graph": [
+        "MOTOR-DEF-1.3"
+      ]
+    },
+    {
+      "claim_id": "C08",
+      "cross_reference": true,
+      "gold": [
+        "MOTOR-CON-5.2",
+        "MOTOR-COV-2.2"
+      ],
+      "vector_top_k": [
+        "MOTOR-CON-5.2",
+        "MOTOR-COV-2.2",
+        "MOTOR-CON-5.1",
+        "MOTOR-COV-2",
+        "MOTOR-LIM-3.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C09",
+      "cross_reference": true,
+      "gold": [
+        "MOTOR-COV-2.1",
+        "MOTOR-END-6.1",
+        "MOTOR-EXC-4.2"
+      ],
+      "vector_top_k": [
+        "MOTOR-LIM-3.3",
+        "MOTOR-CON-5.1",
+        "MOTOR-LIM-3.1",
+        "MOTOR-COV-2.1",
+        "MOTOR-COV-2"
+      ],
+      "vector_recall": 0.333,
+      "graph_recall": 0.667,
+      "vector_same_size_recall": 0.667,
+      "graph_context_size": 15,
+      "missing_after_graph": [
+        "MOTOR-END-6.1"
+      ]
+    },
+    {
+      "claim_id": "C11",
+      "cross_reference": false,
+      "gold": [
+        "PROP-COV-2.1"
+      ],
+      "vector_top_k": [
+        "PROP-COV-2.1",
+        "PROP-CON-5.1",
+        "PROP-COV-2",
+        "PROP-LIM-3.3",
+        "PROP-EXC-4.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 10,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C12",
+      "cross_reference": false,
+      "gold": [
+        "PROP-COV-2.2"
+      ],
+      "vector_top_k": [
+        "PROP-LIM-3.3",
+        "PROP-COV-2.2",
+        "PROP-EXC-4.1",
+        "PROP-CON-5.1",
+        "PROP-COV-2"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 10,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C13",
+      "cross_reference": false,
+      "gold": [
+        "PROP-COV-2.4"
+      ],
+      "vector_top_k": [
+        "PROP-EXC-4.4",
+        "PROP-CON-5.1",
+        "PROP-COV-2",
+        "PROP-COV-2.4",
+        "PROP-LIM-3.2"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 9,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C14",
+      "cross_reference": false,
+      "gold": [
+        "PROP-EXC-4.4"
+      ],
+      "vector_top_k": [
+        "PROP-EXC-4.4",
+        "PROP-LIM-3.2",
+        "PROP-CON-5.1",
+        "PROP-CON-5.2",
+        "PROP-COV-2"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 9,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C15",
+      "cross_reference": false,
+      "gold": [
+        "PROP-EXC-4.1"
+      ],
+      "vector_top_k": [
+        "PROP-EXC-4.1",
+        "PROP-LIM-3.3",
+        "PROP-CON-5.1",
+        "PROP-COV-2",
+        "PROP-LIM-3.2"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 10,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C16",
+      "cross_reference": false,
+      "gold": [
+        "PROP-COV-2.3"
+      ],
+      "vector_top_k": [
+        "PROP-COV-2.3",
+        "PROP-COV-2",
+        "PROP-LIM-3.3",
+        "PROP-EXC-4.1",
+        "PROP-CON-5.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C17",
+      "cross_reference": true,
+      "gold": [
+        "PROP-COV-2.2",
+        "PROP-DEF-1.3",
+        "PROP-EXC-4.2"
+      ],
+      "vector_top_k": [
+        "PROP-COV-2.2",
+        "PROP-LIM-3.3",
+        "PROP-EXC-4.2",
+        "PROP-CON-5.1",
+        "PROP-EXC-4.1"
+      ],
+      "vector_recall": 0.667,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 0.667,
+      "graph_context_size": 10,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C18",
+      "cross_reference": true,
+      "gold": [
+        "PROP-COV-2.3",
+        "PROP-END-6.1",
+        "PROP-EXC-4.3"
+      ],
+      "vector_top_k": [
+        "PROP-LIM-3.3",
+        "PROP-DEF-1.4",
+        "PROP-EXC-4.1",
+        "PROP-COV-2",
+        "PROP-EXC-4.3"
+      ],
+      "vector_recall": 0.333,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C19",
+      "cross_reference": true,
+      "gold": [
+        "PROP-COV-2.3",
+        "PROP-END-6.1",
+        "PROP-EXC-4.3"
+      ],
+      "vector_top_k": [
+        "PROP-LIM-3.3",
+        "PROP-COV-2",
+        "PROP-DEF-1.4",
+        "PROP-EXC-4.1",
+        "PROP-CON-5.1"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 14,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C21",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-COV-2.1"
+      ],
+      "vector_top_k": [
+        "HLTH-CON-5.2",
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2",
+        "HLTH-COV-2.1",
+        "HLTH-EXC-4"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 14,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C22",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-COV-2.2"
+      ],
+      "vector_top_k": [
+        "HLTH-LIM-3.3",
+        "HLTH-CON-5.2",
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2",
+        "HLTH-COV-2.1"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 15,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C23",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-EXC-4.2"
+      ],
+      "vector_top_k": [
+        "HLTH-EXC-4.2",
+        "HLTH-CON-5.2",
+        "HLTH-COV-2",
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 15,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C24",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-EXC-4.3"
+      ],
+      "vector_top_k": [
+        "HLTH-LIM-3.1",
+        "HLTH-CON-5.2",
+        "HLTH-COV-2",
+        "HLTH-EXC-4.3",
+        "HLTH-COV-2.4"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C25",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-EXC-4.4"
+      ],
+      "vector_top_k": [
+        "HLTH-CON-5.2",
+        "HLTH-LIM-3.1",
+        "HLTH-EXC-4.4",
+        "HLTH-COV-2",
+        "HLTH-COV-2.3"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C26",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-COV-2.1",
+        "HLTH-COV-2.4"
+      ],
+      "vector_top_k": [
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2.4",
+        "HLTH-CON-5.2",
+        "HLTH-COV-2",
+        "HLTH-COV-2.1"
+      ],
+      "vector_recall": 1.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 13,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C27",
+      "cross_reference": false,
+      "gold": [
+        "HLTH-COV-2.1"
+      ],
+      "vector_top_k": [
+        "HLTH-CON-5.2",
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2",
+        "HLTH-COV-2.3",
+        "HLTH-EXC-4"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 1.0,
+      "vector_same_size_recall": 1.0,
+      "graph_context_size": 12,
+      "missing_after_graph": []
+    },
+    {
+      "claim_id": "C28",
+      "cross_reference": true,
+      "gold": [
+        "HLTH-COV-2.1",
+        "HLTH-END-6.1",
+        "HLTH-EXC-4.1"
+      ],
+      "vector_top_k": [
+        "HLTH-LIM-3.1",
+        "HLTH-COV-2.3",
+        "HLTH-CON-5.2",
+        "HLTH-EXC-4",
+        "HLTH-COV-2"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 0.667,
+      "vector_same_size_recall": 0.667,
+      "graph_context_size": 12,
+      "missing_after_graph": [
+        "HLTH-END-6.1"
+      ]
+    },
+    {
+      "claim_id": "C29",
+      "cross_reference": true,
+      "gold": [
+        "HLTH-COV-2.1",
+        "HLTH-DEF-1.3",
+        "HLTH-EXC-4.1"
+      ],
+      "vector_top_k": [
+        "HLTH-LIM-3.1",
+        "HLTH-CON-5.2",
+        "HLTH-COV-2",
+        "HLTH-EXC-4",
+        "HLTH-LIM-3.3"
+      ],
+      "vector_recall": 0.0,
+      "graph_recall": 0.0,
+      "vector_same_size_recall": 0.667,
+      "graph_context_size": 9,
+      "missing_after_graph": [
+        "HLTH-COV-2.1",
+        "HLTH-DEF-1.3",
+        "HLTH-EXC-4.1"
+      ]
+    }
+  ],
+  "mean_vector_recall_all": 0.654,
+  "mean_graph_recall_all": 0.926,
+  "full_recall_vector_all": 16,
+  "full_recall_graph_all": 23,
+  "mean_vector_same_size_recall_all": 0.951,
+  "full_recall_vector_same_size_all": 23,
+  "n_all": 27,
+  "mean_vector_recall_cross_reference": 0.333,
+  "mean_graph_recall_cross_reference": 0.75,
+  "full_recall_vector_cross_reference": 1,
+  "full_recall_graph_cross_reference": 4,
+  "mean_vector_same_size_recall_cross_reference": 0.833,
+  "full_recall_vector_same_size_cross_reference": 4,
+  "n_cross_reference": 8,
+  "mean_vector_recall_other": 0.789,
+  "mean_graph_recall_other": 1.0,
+  "full_recall_vector_other": 15,
+  "full_recall_graph_other": 19,
+  "mean_vector_same_size_recall_other": 1.0,
+  "full_recall_vector_same_size_other": 19,
+  "n_other": 19
+}

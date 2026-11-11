@@ -13,12 +13,14 @@ CHROMA_DIR = ROOT / "chroma_db"
 DB_PATH = Path(os.getenv("CLAIMFLOW_DB", ROOT / "claimflow.db"))
 
 # Chosen from client.models.list() on 2026-11-12 (see scripts/models.json).
+# gemini-embedding-2 merges a list of inputs into ONE embedding (SDK test test_gemini_embedding_2_content_combination),
+# so batching clauses with it is wrong; gemini-embedding-001 returns one embedding per input.
 TEXT_MODEL = os.getenv("CLAIMFLOW_TEXT_MODEL", "gemini-3.5-flash-lite")
-EMBED_MODEL = os.getenv("CLAIMFLOW_EMBED_MODEL", "gemini-embedding-2")
+EMBED_MODEL = os.getenv("CLAIMFLOW_EMBED_MODEL", "gemini-embedding-001")
 
-RETRIEVAL_MODE = os.getenv("CLAIMFLOW_RETRIEVAL_MODE", "graph")  # "vector" or "graph"
+RETRIEVAL_MODE = os.getenv("CLAIMFLOW_RETRIEVAL_MODE", "graph")  # "vector", "graph", or "vector_wide" (vector with graph-sized context)
 TOP_K = int(os.getenv("CLAIMFLOW_TOP_K", "5"))
-GRAPH_HOPS = int(os.getenv("CLAIMFLOW_GRAPH_HOPS", "1"))
+GRAPH_HOPS = int(os.getenv("CLAIMFLOW_GRAPH_HOPS", "2"))
 
 # Free-tier throttling (AI Studio, 2026-11-12: 3.5 Flash-Lite 15 RPM / 250K TPM / 500 RPD;
 # Embedding 2 100 RPM / 30K TPM / 1K RPD). 4.5 s between calls stays under 15 RPM.

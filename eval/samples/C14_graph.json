@@ -1,0 +1,94 @@
+{
+  "packet_id": "d70406d31b77",
+  "claim_id": "C14",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:36:29+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Lakshmi Reddy",
+    "policy_number": "PRP-26-27718",
+    "line_of_business": "property",
+    "incident_date": "2026-10-23",
+    "incident_type": "burglary_theft",
+    "description": "On 23 October 2026, the claimant discovered that two gold bangles and a necklace were missing from a bedroom cupboard in Chennai. A police complaint was filed regarding the missing items valued at approximately Rs 1,50,000.",
+    "location": "Chennai",
+    "documents_attached": [],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "damage_photos",
+    "repair_estimate",
+    "proof_of_ownership",
+    "police_report"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-27718 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-EXC-4.4",
+        "quote": "We do not pay for theft or disappearance of contents where there is no sign of forcible and violent entry into the home."
+      }
+    ],
+    "reasoning": "The claimant reported that gold bangles and a necklace were missing from a bedroom cupboard, but specifically stated that the cupboard and the doors were not broken and nothing else was disturbed. Under clause PROP-EXC-4.4, the policy excludes theft or disappearance of contents where there is no sign of forcible and violent entry into the home. Therefore, the claim is not covered.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "PROP-CON-5.2",
+      "PROP-EXC-4.4",
+      "PROP-COV-2.4",
+      "PROP-LIM-3.2",
+      "PROP-CON-5.1"
+    ],
+    "expanded_ids": [
+      "PROP-CON-5",
+      "PROP-EXC-4",
+      "PROP-COV-2",
+      "PROP-LIM-3"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "police_report",
+        "event_ids": [
+          "E5",
+          "E6",
+          "E7",
+          "E8"
+        ],
+        "sop_id": "SOP-DOC-2.2",
+        "fix": "The handler must request the police report alongside the other missing property checklist documents, as burglary and theft claims require a police report."
+      },
+      {
+        "type": "excessive_wait",
+        "document": "proof_of_ownership",
+        "event_ids": [
+          "E8",
+          "E13"
+        ],
+        "sop_id": "SOP-TIM-1.2",
+        "fix": "The handler must send a reminder if a requested document has not been received within 3 days of the request. Here, proof of ownership took 5 days to be received without a reminder."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

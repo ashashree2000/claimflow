@@ -1,0 +1,93 @@
+{
+  "packet_id": "320f1431c3fe",
+  "claim_id": "C07",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:36:06+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Vikram Singh",
+    "policy_number": "MTR-26-52318",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-26",
+    "incident_type": "collision",
+    "description": "Another car jumped a signal and struck the right side of the claimant's car at a junction. The right doors and pillar were damaged, and the estimated repair cost is Rs 70,000.",
+    "location": "Jaipur",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999, and the claim does not involve high severity criteria such as bodily injury, theft, fire, or an estimated loss of Rs 5,00,000 or more."
+  },
+  "documents_missing": [
+    "claim_form",
+    "driving_licence",
+    "registration_certificate"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-52318 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.1",
+        "quote": "We pay for damage to the insured vehicle caused by collision, overturning or impact with another object, subject to MOTOR-EXC-4.1 and MOTOR-EXC-4.2."
+      },
+      {
+        "clause_id": "MOTOR-EXC-4.2",
+        "quote": "We do not pay for any loss while the insured vehicle is being used for commercial use (MOTOR-DEF-1.3). This exclusion is amended by MOTOR-END-6.1."
+      }
+    ],
+    "reasoning": "The claimant's vehicle suffered accidental damage from a collision, which falls under accidental damage coverage MOTOR-COV-2.1. However, this coverage is explicitly subject to the commercial use exclusion in MOTOR-EXC-4.2. Since the claimant stated in the email that he drives for a food-ordering app and was on his way to deliver an order at the time of the incident, the vehicle was being used for commercial use. Therefore, the claim is excluded from coverage.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "MOTOR-LIM-3.1",
+      "MOTOR-LIM-3.3",
+      "MOTOR-COV-2.1",
+      "MOTOR-LIM-3.2",
+      "MOTOR-COV-2.3"
+    ],
+    "expanded_ids": [
+      "MOTOR-COV-2.2",
+      "MOTOR-COV-2.5",
+      "MOTOR-DEF-1.4",
+      "MOTOR-EXC-4.1",
+      "MOTOR-EXC-4.2",
+      "MOTOR-COV-2.4",
+      "MOTOR-EXC-4.4",
+      "MOTOR-CON-5.2",
+      "MOTOR-LIM-3",
+      "MOTOR-COV-2"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "repeated_verification",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E9"
+        ],
+        "sop_id": "SOP-VER-1.2",
+        "fix": "Do not repeat the policy status verification step unless claim facts change and the reason is recorded in the claim file."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

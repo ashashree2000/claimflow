@@ -1,0 +1,78 @@
+{
+  "packet_id": "58bd3f061d2f",
+  "claim_id": "C20",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:43:03+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Rekha Pillai",
+    "policy_number": "PRP-26-60978",
+    "line_of_business": "property",
+    "incident_date": "2026-10-26",
+    "incident_type": "gradual_damage",
+    "description": "The claimant noticed long cracks in their living room walls and compound wall, as well as a door that no longer closes properly, following heavy machinery excavation by a neighbour for a new building.",
+    "location": "Mysuru",
+    "documents_attached": [
+      "damage_photos"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is Rs 75,000, which falls between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-60978 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-EXC-4.1",
+        "quote": "We do not pay for damage that happens gradually, including wear and tear, rot, damp, mould and water seeping slowly over weeks or months."
+      },
+      {
+        "clause_id": "PROP-COV-2",
+        "quote": "We cover the losses in this section, subject to the limits in PROP-LIM-3, the exclusions in PROP-EXC-4 and the conditions in PROP-CON-5."
+      }
+    ],
+    "reasoning": "The claimant reported gradual damage involving long cracks in walls and a misaligned door following neighbour excavation. Under PROP-COV-2, coverage is strictly subject to the exclusions in PROP-EXC-4. Clause PROP-EXC-4.1 explicitly excludes damage that happens gradually. Therefore, the claim is not covered.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "PROP-EXC-4.1",
+      "PROP-COV-2",
+      "PROP-EXC-4",
+      "PROP-CON-5.1",
+      "PROP-END-6.1",
+      "PROP-EXC-4.5",
+      "PROP-LIM-3.1",
+      "PROP-DEF-1.1",
+      "PROP-COV-2.2",
+      "PROP-LIM-3.3",
+      "PROP-EXC-4.4",
+      "PROP-CON-5.3",
+      "PROP-CON-5"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "intake output needed one retry to pass validation"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

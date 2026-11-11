@@ -1,0 +1,66 @@
+{
+  "packet_id": "df1260e4b66d",
+  "claim_id": "C20",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:42:59+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Rekha Pillai",
+    "policy_number": "PRP-26-60978",
+    "line_of_business": "property",
+    "incident_date": "2026-10-26",
+    "incident_type": "gradual_damage",
+    "description": "The claimant noticed long cracks in their living room walls and compound wall, as well as a door that no longer closes properly, following heavy machinery excavation by a neighbour for a new building.",
+    "location": "Mysuru",
+    "documents_attached": [
+      "damage_photos"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is Rs 75,000, which falls between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-60978 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-EXC-4.1",
+        "quote": "We do not pay for damage that happens gradually"
+      }
+    ],
+    "reasoning": "The claimant's property sustained damage in the form of long cracks and a door not closing properly following neighbour excavation. According to the policy, damage that happens gradually is explicitly excluded from coverage under [PROP-EXC-4.1]. As the incident description indicates gradual damage rather than a sudden event, the claim is not covered.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-EXC-4.1",
+      "PROP-COV-2",
+      "PROP-EXC-4",
+      "PROP-CON-5.1",
+      "PROP-END-6.1"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "intake output needed one retry to pass validation"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

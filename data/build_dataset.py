@@ -536,16 +536,16 @@ Usha Rani
 usha.rani@example.com"""),
 
     dict(id="C30", lob="health", name="Karthik Subramanian", policy="HLT-26-58834", date="2026-11-01",
-         itype="hospitalisation", loc="Bangkok", sent="2026-11-04T07:30",
-         attach={"discharge_summary": "bangkok_discharge.pdf", "id_proof": "passport_scan.pdf"},
+         itype="hospitalisation", loc="Chennai", sent="2026-11-04T07:30",
+         attach={"discharge_summary": "marina_discharge.pdf", "id_proof": "id_KS.pdf"},
          sev=dict(emergency=True, estimate=120_000), decision="needs_review", req=[], ok=[], refuse=True,
          flaws=[("repeated_verification", None), ("excessive_wait_doc", "itemised_bill")],
-         subject="Hospitalised while on holiday",
+         subject="Hospital admission claim - HLT-26-58834",
          body="""Hello,
 
-While on holiday in Bangkok, I was admitted through the emergency department of a private hospital on 1 November 2026 with severe food poisoning and dehydration. I stayed for two days and flew home to Chennai on 4 November.
+I was admitted through the emergency department of Marina General Hospital, Chennai, on 1 November 2026 with severe food poisoning and dehydration. I was discharged on 29 October 2026 after two days in hospital.
 
-The bill comes to about Rs 1,20,000 after conversion. I've attached the discharge summary and my ID; the itemised bill will follow. Policy HLT-26-58834.
+The bill comes to about Rs 1,20,000. I've attached the discharge summary and my ID; the itemised bill will follow. Policy HLT-26-58834.
 
 Karthik Subramanian
 +91 90000 28282"""),

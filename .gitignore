@@ -13,3 +13,4 @@ chroma_db/
 # Separate reference project, never commit
 ProcessDNA/
 .DS_Store
+logs/

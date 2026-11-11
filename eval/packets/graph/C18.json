@@ -1,0 +1,69 @@
+{
+  "packet_id": "12e94277b1b5",
+  "claim_id": "C18",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:42:37+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Pooja Agarwal",
+    "policy_number": "PRP-26-51327",
+    "line_of_business": "property",
+    "incident_date": "2026-10-30",
+    "incident_type": "storm_flood",
+    "description": "Heavy rain caused drains to overflow, resulting in rainwater entering the ground floor of the house. The incident caused damage to the wooden flooring and walls.",
+    "location": "Thane",
+    "documents_attached": [
+      "damage_photos"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 (Rs 2,40,000)."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-51327 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": null,
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "repair_estimate",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.2",
+        "fix": "Ensure that all required documents from the property checklist—including the repair estimate—are either attached at intake or requested from the claimant."
+      },
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E5",
+          "E6",
+          "E7"
+        ],
+        "sop_id": "SOP-DOC-1.1",
+        "fix": "Request all missing documents in one consolidated message immediately after the coverage check is completed, rather than requesting them in separate messages or after assigning the surveyor."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "low",
+  "reasons": [
+    "intake output needed one retry to pass validation",
+    "coverage output needed one retry to pass validation"
+  ],
+  "needs_human_review": true,
+  "errors": [
+    "schema validation failed twice: 4 validation errors for CoverageAnswer\ncitations.0.quote\n  Field required [type=missing, input_value={'clause_id': 'PROP-DEF-1... of surface rainwater.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.14/v/missing\ncitations.1.quote\n  Field required [type=missing, i"
+  ]
+}
