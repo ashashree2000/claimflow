@@ -37,3 +37,10 @@ Running record so any session (Claude chat, Claude Code) can pick up the work. N
 - C30 relabel: the first version (hospitalised abroad) was labelled needs_review, but the health wording does address hospitalisation and is silent on territory, so "covered" was defensible. Rewritten as conflicting admission/discharge dates (SOP-ESC-1.2) before the full evaluation.
 - Pilot 1 (5 claims: C09 C12 C18 C20 C28, run 20261111T224100Z_pilot) found: C18/graph schema failure twice (quote field missing); C09/graph END-6.1 cut by the expansion cap; vector_wide k fixed at 13 instead of graph's size; process agent read same-time document requests as a problem; cached query embeddings replayed 0 ms latency.
 - Changes after pilot 1: Gemini structured output with the Pydantic schema (falls back to JSON mode if rejected); graph expansion follows outgoing references first, cap 10; vector_wide uses graph's per-claim context size; process prompt states that same-time requests are one message; embedding latency stored in the cache. These are pilot-driven changes; the full 30-claim run is made once, after pilot 2, with no further tuning.
+- Pilot 2 (run 20261111T224911Z_pilot): no failures; no further changes.
+
+## Milestone 5: full evaluation (2026-11-12)
+- Run 20261111T225615Z, 30 claims x 3 modes, 0 failures. Coverage accuracy vector 66.7% / vector_wide 76.7% / graph 83.3%; cross-reference subset 4/8, 5/8, 7/8. Process: 23 of 28 planted flaws matched, 26 predicted, SOP correct 19/23. 390 model calls in the run, 150 live, cache hit 61.5%.
+
+## Milestone 6 (2026-11-12)
+- FastAPI (api/main.py), Streamlit (app/), pytest 29 tests with a fake model (pass), ruff clean, CI workflow, manual smoke-eval workflow, Dockerfile (API only, requirements-api.txt). Docker build not yet verified.

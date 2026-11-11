@@ -1,0 +1,92 @@
+{
+  "packet_id": "ccae0be92ab2",
+  "claim_id": "C30",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:08:26+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Karthik Subramanian",
+    "policy_number": "HLT-26-58834",
+    "line_of_business": "health",
+    "incident_date": "2026-11-01",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted through the emergency department for severe food poisoning and dehydration, incurring a hospital bill of approximately Rs 1,20,000.",
+    "location": "Chennai",
+    "documents_attached": [
+      "discharge_summary",
+      "id_proof"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves an emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form",
+    "itemised_bill"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-58834 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claim email contains conflicting discharge dates, stating admission on November 1, 2026, but discharge on October 29, 2026. Additionally, the claimant mentions that the itemised bill will follow, which lacks the required original itemised hospital bill under policy conditions. Because the facts conflict and the required documentation is incomplete at intake, the claim must be marked as needing human review.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2"
+    ],
+    "expanded_ids": [
+      "HLTH-CON-5.1",
+      "HLTH-EXC-4.1",
+      "HLTH-DEF-1.3",
+      "HLTH-END-6.1",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2.4",
+      "HLTH-DEF-1",
+      "HLTH-LIM-3",
+      "HLTH-CON-5"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "repeated_verification",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E8"
+        ],
+        "sop_id": "SOP-VER-1.2",
+        "fix": "Perform each verification step only once per claim unless claim facts change and record the reason for any repetition."
+      },
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E4",
+          "E7"
+        ],
+        "sop_id": "SOP-TIM-1.3",
+        "fix": "Assign a medical reviewer within 2 days of completing the coverage check, ensuring the order of verification and assignment is maintained."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

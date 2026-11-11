@@ -1,0 +1,9 @@
+.env
+.git
+.cache
+chroma_db
+logs
+ProcessDNA
+*.db
+__pycache__
+.venv

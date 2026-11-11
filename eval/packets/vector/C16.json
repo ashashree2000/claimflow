@@ -1,0 +1,66 @@
+{
+  "packet_id": "5f888782c0e8",
+  "claim_id": "C16",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:02:48+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Harpreet Kaur",
+    "policy_number": "PRP-26-38841",
+    "line_of_business": "property",
+    "incident_date": "2026-10-27",
+    "incident_type": "storm_flood",
+    "description": "Strong winds during a storm tore off roof sheets and broke a water tank cover over the back of the house. The estimated repair cost is Rs 90,000.",
+    "location": "Mohali",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-38841 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2.3",
+        "quote": "We pay for damage to the home and contents caused by storm, high winds or flood, subject to PROP-EXC-4.3."
+      }
+    ],
+    "reasoning": "The claimant experienced damage to the roof sheets and water tank cover caused by strong winds during a storm on October 27, 2026. Under clause PROP-COV-2.3, damage caused by storm and high winds is a covered loss subject to the exclusions in PROP-EXC-4.3, which are not applicable here. Therefore, the claim is covered.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-COV-2.3",
+      "PROP-LIM-3.3",
+      "PROP-COV-2",
+      "PROP-EXC-4.1",
+      "PROP-DEF-1.4"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

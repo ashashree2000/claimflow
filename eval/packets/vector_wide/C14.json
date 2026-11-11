@@ -1,0 +1,71 @@
+{
+  "packet_id": "4887cf523122",
+  "claim_id": "C14",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:01:58+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Lakshmi Reddy",
+    "policy_number": "PRP-26-27718",
+    "line_of_business": "property",
+    "incident_date": "2026-10-23",
+    "incident_type": "burglary_theft",
+    "description": "Gold bangles and a necklace were discovered missing from a steel cupboard in the bedroom without signs of forced entry. A police complaint was filed regarding the missing items valued at approximately Rs 1,50,000.",
+    "location": "Chennai",
+    "documents_attached": [
+      "police_report"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "damage_photos",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-27718 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-EXC-4.4",
+        "quote": "We do not pay for theft or disappearance of contents where there is no sign of forcible and violent entry into the home."
+      }
+    ],
+    "reasoning": "The claimant reported that gold bangles and a necklace were missing from a steel cupboard without any signs of forced entry. According to policy exclusion PROP-EXC-4.4, theft without forcible and violent entry into the home is not covered. Therefore, the claim is denied.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "PROP-EXC-4.4",
+      "PROP-CON-5.2",
+      "PROP-COV-2.4",
+      "PROP-LIM-3.2",
+      "PROP-CON-5.1",
+      "PROP-COV-2",
+      "PROP-EXC-4",
+      "PROP-DEF-1.2",
+      "PROP-CON-5"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

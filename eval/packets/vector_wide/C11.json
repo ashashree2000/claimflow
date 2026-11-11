@@ -1,0 +1,93 @@
+{
+  "packet_id": "32c465526ec3",
+  "claim_id": "C11",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:00:59+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Meera Joshi",
+    "policy_number": "PRP-26-11834",
+    "line_of_business": "property",
+    "incident_date": "2026-10-14",
+    "incident_type": "fire",
+    "description": "A kitchen fire caused by oil on the stove damaged cabinets, a chimney, a fridge, and part of the ceiling, while smoke covered the flat.",
+    "location": "Ahmedabad",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-11834 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2",
+        "quote": "We cover the losses in this section, subject to the limits in PROP-LIM-3, the exclusions in PROP-EXC-4 and the conditions in PROP-CON-5."
+      },
+      {
+        "clause_id": "PROP-COV-2.1",
+        "quote": "Fire and smoke: We pay for damage to the home and contents caused by fire, smoke, lightning or explosion."
+      }
+    ],
+    "reasoning": "The claimant experienced a kitchen fire and smoke damage caused by oil catching fire on the stove, which directly falls under the coverage for fire and smoke. According to the policy, losses in the coverage section are covered subject to specified exclusions, and no applicable exclusions from the policy apply to this accidental kitchen fire. Therefore, the claim is approved for coverage.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "PROP-COV-2.1",
+      "PROP-COV-2",
+      "PROP-EXC-4.1",
+      "PROP-EXC-4",
+      "PROP-EXC-4.5",
+      "PROP-DEF-1.2",
+      "PROP-COV-2.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "sop_id": "SOP-VER-1.1",
+        "fix": "Verify the policy status and complete the coverage check before assigning a surveyor. Reorder the steps according to SOP-VER-1.1."
+      },
+      {
+        "type": "missing_document",
+        "document": "proof_of_ownership",
+        "event_ids": [
+          "E6"
+        ],
+        "sop_id": "SOP-DOC-1.1",
+        "fix": "Request all missing documents from the property checklist, including proof of ownership, in one consolidated message as soon as coverage is checked."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

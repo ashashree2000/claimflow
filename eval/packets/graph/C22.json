@@ -1,0 +1,79 @@
+{
+  "packet_id": "ef494c7ee135",
+  "claim_id": "C22",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:05:10+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Savitri Devi",
+    "policy_number": "HLT-26-11709",
+    "line_of_business": "health",
+    "incident_date": "2026-10-21",
+    "incident_type": "day_care",
+    "description": "The claimant underwent cataract surgery on her right eye at Netra Eye Centre in Varanasi on 21 October 2026 and was discharged the same day, with total bills amounting to Rs 35,000.",
+    "location": "Varanasi",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "low",
+    "severity_reason": "Severity is low as the estimated loss is below Rs 50,000 and the claim does not involve any high-severity triggers such as bodily injury, fire, theft, or an emergency admission."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-11709 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-COV-2.2",
+        "quote": "We pay for day-care procedures (HLTH-DEF-1.2), subject to the sub-limit in HLTH-LIM-3.3."
+      },
+      {
+        "clause_id": "HLTH-DEF-1.2",
+        "quote": "A procedure that needs less than 24 hours in hospital, limited to cataract surgery, dialysis, chemotherapy, radiotherapy and lithotripsy."
+      },
+      {
+        "clause_id": "HLTH-LIM-3.3",
+        "quote": "The most we pay for cataract surgery is Rs 40,000 per eye."
+      }
+    ],
+    "reasoning": "The claimant underwent cataract surgery which qualifies as a day-care procedure requiring less than 24 hours in the hospital under the policy definitions. The policy covers day-care procedures subject to the cataract sub-limit of Rs 40,000 per eye. Since the claimed amount is Rs 35,000, it falls within the allowed sub-limit and is fully covered.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "HLTH-LIM-3.3",
+      "HLTH-COV-2.2",
+      "HLTH-DEF-1.2",
+      "HLTH-CON-5.2",
+      "HLTH-LIM-3.1"
+    ],
+    "expanded_ids": [
+      "HLTH-LIM-3",
+      "HLTH-COV-2",
+      "HLTH-DEF-1",
+      "HLTH-CON-5"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

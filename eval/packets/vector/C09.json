@@ -1,8 +1,8 @@
 {
-  "packet_id": "aabd7cf5f260",
+  "packet_id": "ea46deb73bab",
   "claim_id": "C09",
   "synthetic": true,
-  "created_at": "2026-11-11T22:41:20+00:00",
+  "created_at": "2026-11-11T23:00:04+00:00",
   "model": "gemini-3.5-flash-lite",
   "retrieval_mode": "vector",
   "intake": {
@@ -11,15 +11,15 @@
     "line_of_business": "motor",
     "incident_date": "2026-10-28",
     "incident_type": "collision",
-    "description": "The claimant's car was hit on the left side by a tempo that changed lanes without signalling. The left doors and mirror are damaged, and the repair estimate is Rs 95,000.",
+    "description": "A tempo changed lanes without signalling and hit the left side of the claimant's car on the Western Express Highway in Mumbai, causing damage to the left doors and mirror. No injuries were reported.",
     "location": "Mumbai",
     "documents_attached": [
-      "registration_certificate",
       "damage_photos",
+      "registration_certificate",
       "repair_estimate"
     ],
     "severity": "medium",
-    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999, and the claim does not involve high-severity criteria such as bodily injury, vehicle theft, fire, or loss of Rs 5,00,000 or more."
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
   },
   "documents_missing": [
     "claim_form",
@@ -38,33 +38,28 @@
     "decision": "covered",
     "citations": [
       {
+        "clause_id": "MOTOR-COV-2",
+        "quote": "We cover the losses in this section, subject to the limits in MOTOR-LIM-3, the exclusions in MOTOR-EXC-4 and the conditions in MOTOR-CON-5."
+      },
+      {
         "clause_id": "MOTOR-COV-2.1",
         "quote": "We pay for damage to the insured vehicle caused by collision, overturning or impact with another object, subject to MOTOR-EXC-4.1 and MOTOR-EXC-4.2."
       }
     ],
-    "reasoning": "The claimant's vehicle suffered damage from a collision when a tempo hit the left side of the car, which falls directly under the accidental damage coverage. The claim meets the criteria for coverage as it involves an impact with another object on the road.",
+    "reasoning": "The insured vehicle sustained accidental damage caused by a collision with another vehicle (a tempo), which is covered under MOTOR-COV-2.1. The claim falls within the broader coverage framework of MOTOR-COV-2 and is subject to the applicable limits, exclusions, and conditions.",
     "retrieval_mode": "vector",
     "retrieved_ids": [
-      "MOTOR-LIM-3.1",
       "MOTOR-LIM-3.3",
       "MOTOR-COV-2.1",
-      "MOTOR-LIM-3.2",
-      "MOTOR-COV-2"
+      "MOTOR-LIM-3.1",
+      "MOTOR-COV-2",
+      "MOTOR-CON-5.1"
     ],
     "expanded_ids": [],
     "guardrail_notes": []
   },
   "process": {
     "flags": [
-      {
-        "type": "missing_document",
-        "document": "driving_licence",
-        "event_ids": [
-          "E4"
-        ],
-        "sop_id": "SOP-DOC-2.1",
-        "fix": "Review the motor checklist and request the missing driving licence alongside any other missing documents."
-      },
       {
         "type": "excessive_wait",
         "document": null,
@@ -73,14 +68,21 @@
           "E6"
         ],
         "sop_id": "SOP-TIM-1.1",
-        "fix": "Send the acknowledgement promptly within 24 hours of FNOL receipt."
+        "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL. Ensure acknowledgements are dispatched promptly to comply with the 24-hour limit."
+      },
+      {
+        "type": "missing_document",
+        "document": "driving_licence",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.1",
+        "fix": "Identify all missing mandatory documents from the motor checklist, including the driver's driving licence, and request them immediately after the coverage check."
       }
     ],
     "guardrail_notes": []
   },
-  "confidence": "medium",
+  "confidence": "high",
   "reasons": [
-    "intake output needed one retry to pass validation"
+    "all citations verified against the clause text; outputs passed validation first time"
   ],
   "needs_human_review": false,
   "errors": []

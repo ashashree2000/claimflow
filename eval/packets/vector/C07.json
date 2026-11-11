@@ -1,0 +1,86 @@
+{
+  "packet_id": "1d523509e45a",
+  "claim_id": "C07",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:59:28+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Vikram Singh",
+    "policy_number": "MTR-26-52318",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-26",
+    "incident_type": "collision",
+    "description": "Another vehicle jumped a signal at a junction and struck the right side of the claimant's car, causing damage to the right doors and pillar. At the time of the incident, the claimant was driving for a food-ordering app to deliver an order.",
+    "location": "Jaipur",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is Rs 70,000, which falls between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "driving_licence",
+    "registration_certificate"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-52318 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.1",
+        "quote": "We pay for damage to the insured vehicle caused by collision, overturning or impact with another object, subject to MOTOR-EXC-4.1 and MOTOR-EXC-4.2."
+      },
+      {
+        "clause_id": "MOTOR-EXC-4.2",
+        "quote": "We do not pay for any loss while the insured vehicle is being used for commercial use (MOTOR-DEF-1.3)."
+      },
+      {
+        "clause_id": "MOTOR-DEF-1.3",
+        "quote": "Use of the insured vehicle for hire or reward, meaning carrying passengers or goods in return for payment, including work arranged through any digital platform."
+      }
+    ],
+    "reasoning": "While the claim involves accidental collision damage covered under MOTOR-COV-2.1, the policy excludes losses occurring during commercial use as per MOTOR-EXC-4.2. The claimant was delivering food for an app at the time of the incident, which falls under the definition of commercial use in MOTOR-DEF-1.3. Therefore, the claim is not covered.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "MOTOR-COV-2.1",
+      "MOTOR-DEF-1.3",
+      "MOTOR-COV-2.3",
+      "MOTOR-COV-2",
+      "MOTOR-EXC-4.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "repeated_verification",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E9"
+        ],
+        "sop_id": "SOP-VER-1.2",
+        "fix": "Do not repeat verification steps unless claim facts change and the reason is recorded in the claim file."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

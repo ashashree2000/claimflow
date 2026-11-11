@@ -1,8 +1,8 @@
 {
-  "packet_id": "000b5b3d06d8",
+  "packet_id": "59b60b226a18",
   "claim_id": "C18",
   "synthetic": true,
-  "created_at": "2026-11-11T22:42:28+00:00",
+  "created_at": "2026-11-11T23:03:49+00:00",
   "model": "gemini-3.5-flash-lite",
   "retrieval_mode": "vector_wide",
   "intake": {
@@ -11,13 +11,13 @@
     "line_of_business": "property",
     "incident_date": "2026-10-30",
     "incident_type": "storm_flood",
-    "description": "Heavy rain caused drains to overflow, resulting in rainwater entering the ground floor of the house. The incident caused damage to the wooden flooring and walls.",
+    "description": "Rainwater overflowed from drains and entered the ground floor of the house after heavy rain on 30 October 2026. The incident caused damage to the wooden flooring and walls, with an estimated repair cost of Rs 2,40,000.",
     "location": "Thane",
     "documents_attached": [
       "damage_photos"
     ],
     "severity": "medium",
-    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 (Rs 2,40,000)."
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
   },
   "documents_missing": [
     "claim_form",
@@ -50,25 +50,25 @@
       },
       {
         "clause_id": "PROP-END-6.1",
-        "quote": "Flood cover for the building: PROP-EXC-4.3 does not apply to damage to the home itself (PROP-DEF-1.1). It still applies to contents kept below ground level, such as in a basement or cellar."
+        "quote": "Flood cover for the building: PROP-EXC-4.3 does not apply to damage to the home itself (PROP-DEF-1.1)."
       }
     ],
-    "reasoning": "Heavy rain caused drains to overflow and water to enter the home, which qualifies as a flood under PROP-DEF-1.4. While PROP-COV-2.3 covers flood damage subject to the exclusion in PROP-EXC-4.3, that exclusion is amended by PROP-END-6.1, which states that the flood exclusion does not apply to damage to the home itself. Since the damage affected the wooden flooring and walls of the home, the claim is covered.",
+    "reasoning": "The incident involves rainwater overflowing from drains and entering the ground floor, which constitutes a flood under PROP-DEF-1.4. While PROP-COV-2.3 covers flood damage subject to the exclusion in PROP-EXC-4.3, that exclusion is amended by PROP-END-6.1 so that it does not apply to damage to the home itself. Since the damage is to the wooden flooring and walls of the home rather than contents below ground level, the claim is covered.",
     "retrieval_mode": "vector_wide",
     "retrieved_ids": [
       "PROP-DEF-1.4",
       "PROP-COV-2.3",
-      "PROP-EXC-4.1",
-      "PROP-END-6.1",
-      "PROP-COV-2",
-      "PROP-EXC-4.3",
       "PROP-LIM-3.3",
+      "PROP-EXC-4.1",
+      "PROP-EXC-4.3",
+      "PROP-COV-2",
+      "PROP-END-6.1",
       "PROP-EXC-4",
+      "PROP-LIM-3.2",
       "PROP-COV-2.2",
-      "PROP-DEF-1.1",
+      "PROP-LIM-3.1",
       "PROP-CON-5.3",
-      "PROP-COV-2.1",
-      "PROP-EXC-4.2"
+      "PROP-DEF-1.1"
     ],
     "expanded_ids": [],
     "guardrail_notes": []
@@ -78,27 +78,19 @@
       {
         "type": "missing_document",
         "document": "repair_estimate",
-        "event_ids": [],
-        "sop_id": "SOP-DOC-2.2",
-        "fix": "Ensure that all required documents from the property checklist—including the repair estimate—are either attached at intake or requested from the claimant."
-      },
-      {
-        "type": "out_of_order",
-        "document": null,
         "event_ids": [
           "E5",
-          "E6",
-          "E7"
+          "E6"
         ],
         "sop_id": "SOP-DOC-1.1",
-        "fix": "Request all missing documents in one consolidated message immediately after the coverage check is completed, rather than requesting them in separate messages or after assigning the surveyor."
+        "fix": "Review the property checklist and request the repair estimate alongside the other missing documents in the initial consolidated request message."
       }
     ],
     "guardrail_notes": []
   },
-  "confidence": "medium",
+  "confidence": "high",
   "reasons": [
-    "intake output needed one retry to pass validation"
+    "all citations verified against the clause text; outputs passed validation first time"
   ],
   "needs_human_review": false,
   "errors": []

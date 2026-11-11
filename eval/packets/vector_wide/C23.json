@@ -1,0 +1,88 @@
+{
+  "packet_id": "9a5c44d8d16c",
+  "claim_id": "C23",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:05:39+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Kunal Shah",
+    "policy_number": "HLT-26-19364",
+    "line_of_business": "health",
+    "incident_date": "2026-10-19",
+    "incident_type": "planned_admission",
+    "description": "The claimant underwent a planned rhinoplasty surgery at Aura Aesthetic Clinic in Mumbai on 19 October 2026 with a one-night stay, costing Rs 1,50,000.",
+    "location": "Mumbai",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill"
+    ],
+    "severity": "medium",
+    "severity_reason": "The claim involves a planned hospital admission with an estimated loss between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "id_proof"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-19364 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-EXC-4.2",
+        "quote": "We do not pay for cosmetic or aesthetic treatment, unless it is needed to repair damage caused by an accident or burns."
+      }
+    ],
+    "reasoning": "The claimant underwent a planned rhinoplasty purely for cosmetic reasons without any underlying injury or breathing problem. Under clause HLTH-EXC-4.2, cosmetic or aesthetic treatments are excluded unless needed to repair damage caused by an accident or burns. Therefore, this claim is not covered.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-COV-2.1",
+      "HLTH-EXC-4.2",
+      "HLTH-COV-2",
+      "HLTH-LIM-3.1",
+      "HLTH-COV-2.2",
+      "HLTH-CON-5.2",
+      "HLTH-EXC-4",
+      "HLTH-LIM-3.2",
+      "HLTH-COV-2.3",
+      "HLTH-LIM-3.3",
+      "HLTH-DEF-1.1",
+      "HLTH-EXC-4.3",
+      "HLTH-CON-5.1",
+      "HLTH-END-6",
+      "HLTH-EXC-4.5",
+      "HLTH-COV-2.4"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "repeated_verification",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E8"
+        ],
+        "sop_id": "SOP-VER-1.2",
+        "fix": "Do not repeat the policy status verification step without a recorded reason, as each verification step is performed only once per claim."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

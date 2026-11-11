@@ -1,0 +1,82 @@
+{
+  "packet_id": "2251d74032f5",
+  "claim_id": "C19",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:04:08+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Aditya Kapoor",
+    "policy_number": "PRP-26-56602",
+    "line_of_business": "property",
+    "incident_date": "2026-11-02",
+    "incident_type": "storm_flood",
+    "description": "Heavy rain caused surface water to enter the basement store room of the insured property, soaking and ruining stored items including a sofa set, mattresses, books, and winter clothes. The estimated value of the damaged items is Rs 1,10,000.",
+    "location": "Noida",
+    "documents_attached": [
+      "damage_photos",
+      "proof_of_ownership"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-56602 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2.3",
+        "quote": "We pay for damage to the home and contents caused by storm, high winds or flood, subject to PROP-EXC-4.3."
+      },
+      {
+        "clause_id": "PROP-DEF-1.4",
+        "quote": "Water entering the home from overflowing rivers, lakes or drains, or from the build-up of surface rainwater."
+      }
+    ],
+    "reasoning": "The claim involves damage to stored contents in the basement caused by surface water from heavy rain, which qualifies as a flood under the policy definition PROP-DEF-1.4. Clause PROP-COV-2.3 provides coverage for damage to contents caused by a flood. Therefore, the loss is covered under the storm and flood provision.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-COV-2.3",
+      "PROP-LIM-3.3",
+      "PROP-DEF-1.4",
+      "PROP-COV-2",
+      "PROP-EXC-4.1"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E4",
+          "E5"
+        ],
+        "sop_id": "SOP-VER-1.1",
+        "fix": "Verify the policy status and complete the coverage check before assigning a surveyor."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

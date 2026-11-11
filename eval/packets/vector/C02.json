@@ -1,0 +1,71 @@
+{
+  "packet_id": "29f0be9f0d89",
+  "claim_id": "C02",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:57:02+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Kavya Iyer",
+    "policy_number": "MTR-26-11862",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-15",
+    "incident_type": "collision",
+    "description": "The claimant's car skidded on a wet road due to heavy rain and hit the road divider in Bengaluru, causing damage to the front bumper, bonnet, and left headlamp.",
+    "location": "Bengaluru",
+    "documents_attached": [
+      "damage_photos",
+      "driving_licence",
+      "registration_certificate",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 and the claim does not involve high severity triggers such as bodily injury, theft, fire, or loss of Rs 5,00,000 or more."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-11862 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.1",
+        "quote": "We pay for damage to the insured vehicle caused by collision, overturning or impact with another object, subject to MOTOR-EXC-4.1 and MOTOR-EXC-4.2."
+      },
+      {
+        "clause_id": "MOTOR-LIM-3.1",
+        "quote": "For claims under MOTOR-COV-2.1, MOTOR-COV-2.2 and MOTOR-COV-2.5 the most we pay is the market value (MOTOR-DEF-1.4). The policyholder pays the first Rs 5,000 of each claim."
+      }
+    ],
+    "reasoning": "The claimant's car suffered accidental damage from impacting a road divider after skidding on a wet road, which is covered under accidental damage. The policy covers this collision event subject to the own-damage limit and excess where the policyholder pays the first Rs 5,000. All required incident details and documents are provided clearly without any conflicts or exclusions triggered.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "MOTOR-COV-2.1",
+      "MOTOR-LIM-3.1",
+      "MOTOR-COV-2.5",
+      "MOTOR-COV-2",
+      "MOTOR-LIM-3.3"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

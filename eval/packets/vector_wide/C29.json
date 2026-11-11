@@ -1,0 +1,76 @@
+{
+  "packet_id": "1abf9971e224",
+  "claim_id": "C29",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:54+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Usha Rani",
+    "policy_number": "HLT-26-52809",
+    "line_of_business": "health",
+    "incident_date": "2026-11-03",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted to the hospital for a planned knee replacement on 3 November 2026 and discharged on 7 November 2026.",
+    "location": "Visakhapatnam",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill"
+    ],
+    "severity": "medium",
+    "severity_reason": "The claim involves a planned hospital admission and the estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "id_proof"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-52809 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claimant was admitted for a planned knee replacement which meets the definition of hospitalisation, and notice was provided. However, the policy clauses provided in the context do not contain the specific exclusions referenced by HLTH-COV-2.1, such as HLTH-EXC-4.1 regarding pre-existing conditions like osteoarthritis diagnosed in 2022. Because the necessary exclusion clauses are missing from the policy text to fully evaluate coverage, the claim requires human review by a senior handler.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2",
+      "HLTH-EXC-4.3",
+      "HLTH-EXC-4",
+      "HLTH-COV-2.2",
+      "HLTH-LIM-3.2",
+      "HLTH-END-6",
+      "HLTH-DEF-1.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "id_proof",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.3",
+        "fix": "Review the checklist for health claims in SOP-DOC-2.3 and issue a document request for the insured person's ID proof, which was required but never requested."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

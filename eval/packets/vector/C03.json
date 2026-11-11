@@ -1,0 +1,73 @@
+{
+  "packet_id": "b0ff0eeee0fd",
+  "claim_id": "C03",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:57:35+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Arjun Malhotra",
+    "policy_number": "MTR-26-20981",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-18",
+    "incident_type": "collision",
+    "description": "The claimant crashed the front of their vehicle into the back of a stationary truck on Golf Course Road in Gurugram. The workshop repair estimate is Rs 1,20,000.",
+    "location": "Gurugram",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "driving_licence",
+    "registration_certificate"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-20981 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The policy clauses provided do not contain any exclusions or rules regarding driving under the influence of alcohol or exceeding legal breath test limits. As the policy wording does not address this event or exclusion specifically, the claim must be marked as needing human review and referred to a senior handler.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "MOTOR-LIM-3.1",
+      "MOTOR-LIM-3.3",
+      "MOTOR-COV-2.1",
+      "MOTOR-LIM-3.2",
+      "MOTOR-COV-2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "duplicate_request",
+        "document": "claim_form",
+        "event_ids": [
+          "E9",
+          "E12"
+        ],
+        "sop_id": "SOP-DOC-1.3",
+        "fix": "Before requesting a document, check the claim file to ensure it has not already been received. The handler should not have requested the claim form again on E12 since it was already received in E9."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

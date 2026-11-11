@@ -1,0 +1,82 @@
+{
+  "packet_id": "e5508f8ce226",
+  "claim_id": "C21",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:04:42+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Aman Tiwari",
+    "policy_number": "HLT-26-10552",
+    "line_of_business": "health",
+    "incident_date": "2026-10-13",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted as an emergency to City Care Hospital on 13 October 2026 with severe stomach pain and underwent surgery for appendicitis. Total estimated medical expenses are Rs 1,40,000.",
+    "location": "Bhopal",
+    "documents_attached": [
+      "discharge_summary",
+      "id_proof"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves an emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form",
+    "itemised_bill"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-10552 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claim involves an emergency hospitalisation for appendicitis with medical expenses of Rs 1,40,000. However, the available facts do not confirm whether the original itemised hospital bill was submitted as required by the policy conditions. Therefore, the claim requires human review to verify all necessary document submissions.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2"
+    ],
+    "expanded_ids": [
+      "HLTH-CON-5.1",
+      "HLTH-EXC-4.1",
+      "HLTH-DEF-1.3",
+      "HLTH-END-6.1",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2.4",
+      "HLTH-LIM-3",
+      "HLTH-DEF-1",
+      "HLTH-CON-5"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "itemised_bill",
+        "event_ids": [
+          "E4",
+          "E5"
+        ],
+        "sop_id": "SOP-DOC-1.1",
+        "fix": "Request all missing documents in one consolidated message as soon as the coverage check is completed, ensuring the itemised bill is requested since it was not attached to the notice."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

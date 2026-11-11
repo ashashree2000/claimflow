@@ -1,0 +1,86 @@
+{
+  "packet_id": "f68fb6830c3a",
+  "claim_id": "C29",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:59+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "graph",
+  "intake": {
+    "claimant_name": "Usha Rani",
+    "policy_number": "HLT-26-52809",
+    "line_of_business": "health",
+    "incident_date": "2026-11-03",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted to the hospital for a planned knee replacement on 3 November 2026 and discharged on 7 November 2026.",
+    "location": "Visakhapatnam",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill"
+    ],
+    "severity": "medium",
+    "severity_reason": "The claim involves a planned hospital admission and the estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "id_proof"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-52809 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-EXC-4.1",
+        "quote": "We do not pay for treatment of a pre-existing condition (HLTH-DEF-1.3) until the insured person has had 36 months of continuous cover."
+      },
+      {
+        "clause_id": "HLTH-DEF-1.3",
+        "quote": "Any condition, illness or injury that was diagnosed by a doctor, or for which the insured person received treatment or medication, within 36 months before the policy start date."
+      }
+    ],
+    "reasoning": "The claimant was diagnosed with osteoarthritis in 2022 and has been on painkillers and physiotherapy since then, which falls under the definition of a pre-existing condition because it occurred within 36 months before the policy start date of 1 September 2024. The policy requires 36 months of continuous cover before pre-existing conditions are covered, and the claimant has not yet completed this period since the policy start date. Therefore, the knee replacement treatment for this pre-existing condition is excluded from coverage.",
+    "retrieval_mode": "graph",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.3"
+    ],
+    "expanded_ids": [
+      "HLTH-EXC-4.1",
+      "HLTH-DEF-1.3",
+      "HLTH-END-6.1",
+      "HLTH-COV-2.4",
+      "HLTH-DEF-1",
+      "HLTH-CON-5",
+      "HLTH-COV-2"
+    ],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "id_proof",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.3",
+        "fix": "Review the checklist for health claims in SOP-DOC-2.3 and issue a document request for the insured person's ID proof, which was required but never requested."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

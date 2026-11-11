@@ -1,0 +1,91 @@
+{
+  "packet_id": "1fafacf3e4c8",
+  "claim_id": "C01",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:56:35+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Rohan Mehta",
+    "policy_number": "MTR-26-10417",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-12",
+    "incident_type": "windscreen",
+    "description": "While driving on the expressway near Lonavala, a stone thrown up by a truck hit the car's windscreen and cracked it across the driver's side. No injuries occurred and repair is estimated at Rs 18,000.",
+    "location": "Lonavala",
+    "documents_attached": [
+      "damage_photos",
+      "driving_licence"
+    ],
+    "severity": "low",
+    "severity_reason": "The claim involves windscreen damage with no bodily injury and an estimated loss below Rs 50,000, which falls under low severity."
+  },
+  "documents_missing": [
+    "claim_form",
+    "registration_certificate",
+    "repair_estimate"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-10417 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.4",
+        "quote": "We pay to repair or replace broken windscreen, window or sunroof glass of the insured vehicle."
+      },
+      {
+        "clause_id": "MOTOR-LIM-3.2",
+        "quote": "The most we pay under MOTOR-COV-2.4 is Rs 25,000 per claim."
+      }
+    ],
+    "reasoning": "The claimant experienced a cracked windscreen caused by a stone thrown up by a truck, which is covered under windscreen and glass benefits. The repair cost is estimated at Rs 18,000, falling well within the Rs 25,000 limit specified for glass claims. No excess applies to this coverage, making the claim fully eligible for payment.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "MOTOR-LIM-3.2",
+      "MOTOR-COV-2.4",
+      "MOTOR-LIM-3.1",
+      "MOTOR-LIM-3.3",
+      "MOTOR-COV-2",
+      "MOTOR-COV-2.1",
+      "MOTOR-EXC-4",
+      "MOTOR-LIM-3",
+      "MOTOR-COV-2.5",
+      "MOTOR-EXC-4.4",
+      "MOTOR-DEF-1",
+      "MOTOR-CON-5.1",
+      "MOTOR-COV-2.3",
+      "MOTOR-CON-5"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "excessive_wait",
+        "document": null,
+        "event_ids": [
+          "E1",
+          "E8"
+        ],
+        "sop_id": "SOP-TIM-1.1",
+        "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL. E8 occurred 48 hours after E1."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

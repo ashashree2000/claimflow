@@ -1,8 +1,8 @@
 {
-  "packet_id": "cd4c15eadfcf",
+  "packet_id": "0f8e8d7ae224",
   "claim_id": "C09",
   "synthetic": true,
-  "created_at": "2026-11-11T22:41:29+00:00",
+  "created_at": "2026-11-11T23:00:04+00:00",
   "model": "gemini-3.5-flash-lite",
   "retrieval_mode": "graph",
   "intake": {
@@ -11,15 +11,15 @@
     "line_of_business": "motor",
     "incident_date": "2026-10-28",
     "incident_type": "collision",
-    "description": "The claimant's car was hit on the left side by a tempo that changed lanes without signalling. The left doors and mirror are damaged, and the repair estimate is Rs 95,000.",
+    "description": "A tempo changed lanes without signalling and hit the left side of the claimant's car on the Western Express Highway in Mumbai, causing damage to the left doors and mirror. No injuries were reported.",
     "location": "Mumbai",
     "documents_attached": [
-      "registration_certificate",
       "damage_photos",
+      "registration_certificate",
       "repair_estimate"
     ],
     "severity": "medium",
-    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999, and the claim does not involve high-severity criteria such as bodily injury, vehicle theft, fire, or loss of Rs 5,00,000 or more."
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
   },
   "documents_missing": [
     "claim_form",
@@ -35,41 +35,48 @@
     "method": "rules"
   },
   "coverage": {
-    "decision": "needs_review",
-    "citations": [],
-    "reasoning": "The claim involves potential commercial use since the claimant drives colleagues to work daily in exchange for contributions towards petrol and tolls, which invokes MOTOR-EXC-4.2. However, the policy text mentions that MOTOR-EXC-4.2 is amended by MOTOR-END-6.1, but the provided clauses do not include MOTOR-END-6.1. Therefore, the policy wording is incomplete regarding whether this specific arrangement constitutes an excluded commercial use, requiring referral to a senior handler per the insurer's rules.",
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.1",
+        "quote": "We pay for damage to the insured vehicle caused by collision, overturning or impact with another object, subject to MOTOR-EXC-4.1 and MOTOR-EXC-4.2."
+      },
+      {
+        "clause_id": "MOTOR-EXC-4.2",
+        "quote": "We do not pay for any loss while the insured vehicle is being used for commercial use (MOTOR-DEF-1.3). This exclusion is amended by MOTOR-END-6.1."
+      },
+      {
+        "clause_id": "MOTOR-END-6.1",
+        "quote": "MOTOR-EXC-4.2 does not apply when passengers only share the fuel and toll costs of a journey and the driver makes no profit from it."
+      }
+    ],
+    "reasoning": "The claimant's vehicle suffered accidental collision damage, which is typically covered under MOTOR-COV-2.1. Although the commercial use exclusion in MOTOR-EXC-4.2 initially applies because colleagues contributed to petrol and tolls, the endorsement MOTOR-END-6.1 explicitly amends this exclusion when passengers merely share fuel and toll costs without the driver making a profit. Therefore, the claim is covered.",
     "retrieval_mode": "graph",
     "retrieved_ids": [
-      "MOTOR-LIM-3.1",
       "MOTOR-LIM-3.3",
       "MOTOR-COV-2.1",
-      "MOTOR-LIM-3.2",
-      "MOTOR-COV-2"
+      "MOTOR-LIM-3.1",
+      "MOTOR-COV-2",
+      "MOTOR-CON-5.1"
     ],
     "expanded_ids": [
+      "MOTOR-EXC-4.1",
+      "MOTOR-EXC-4.2",
       "MOTOR-COV-2.2",
       "MOTOR-COV-2.5",
       "MOTOR-DEF-1.4",
-      "MOTOR-EXC-4.1",
-      "MOTOR-EXC-4.2",
-      "MOTOR-COV-2.4",
+      "MOTOR-DEF-1.2",
+      "MOTOR-DEF-1.3",
+      "MOTOR-END-6.1",
+      "MOTOR-CON-5.2",
       "MOTOR-COV-2.3",
-      "MOTOR-EXC-4.4",
-      "MOTOR-LIM-3"
+      "MOTOR-LIM-3",
+      "MOTOR-CON-5"
     ],
     "guardrail_notes": []
   },
   "process": {
     "flags": [
-      {
-        "type": "missing_document",
-        "document": "driving_licence",
-        "event_ids": [
-          "E4"
-        ],
-        "sop_id": "SOP-DOC-2.1",
-        "fix": "Review the motor checklist and request the missing driving licence alongside any other missing documents."
-      },
       {
         "type": "excessive_wait",
         "document": null,
@@ -78,16 +85,22 @@
           "E6"
         ],
         "sop_id": "SOP-TIM-1.1",
-        "fix": "Send the acknowledgement promptly within 24 hours of FNOL receipt."
+        "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL. Ensure acknowledgements are dispatched promptly to comply with the 24-hour limit."
+      },
+      {
+        "type": "missing_document",
+        "document": "driving_licence",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.1",
+        "fix": "Identify all missing mandatory documents from the motor checklist, including the driver's driving licence, and request them immediately after the coverage check."
       }
     ],
     "guardrail_notes": []
   },
-  "confidence": "medium",
+  "confidence": "high",
   "reasons": [
-    "intake output needed one retry to pass validation",
-    "coverage could not be decided from the policy clauses"
+    "all citations verified against the clause text; outputs passed validation first time"
   ],
-  "needs_human_review": true,
+  "needs_human_review": false,
   "errors": []
 }

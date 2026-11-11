@@ -1,0 +1,90 @@
+{
+  "packet_id": "2ebf9c14400a",
+  "claim_id": "C21",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:04:38+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Aman Tiwari",
+    "policy_number": "HLT-26-10552",
+    "line_of_business": "health",
+    "incident_date": "2026-10-13",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted as an emergency to City Care Hospital on 13 October 2026 with severe stomach pain and underwent surgery for appendicitis. Total estimated medical expenses are Rs 1,40,000.",
+    "location": "Bhopal",
+    "documents_attached": [
+      "discharge_summary",
+      "id_proof"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves an emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form",
+    "itemised_bill"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-10552 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-COV-2.1",
+        "quote": "Inpatient hospitalisation: We pay for room, nursing, surgery, doctors' fees, tests and medicines during hospitalisation (HLTH-DEF-1.1), subject to HLTH-EXC-4.1 and HLTH-CON-5.1."
+      },
+      {
+        "clause_id": "HLTH-DEF-1.1",
+        "quote": "Hospitalisation: Admission to a hospital as an inpatient for at least 24 consecutive hours on a doctor's advice."
+      }
+    ],
+    "reasoning": "The claimant was admitted as an inpatient to the hospital for surgery on a doctor's advice and stayed from 13 October to 16 October 2026, satisfying the 24-hour hospitalisation definition. This inpatient hospitalisation and the associated surgery expenses are covered under clause HLTH-COV-2.1.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2",
+      "HLTH-LIM-3.2",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2.4",
+      "HLTH-CON-5.1",
+      "HLTH-EXC-4",
+      "HLTH-COV-2.2",
+      "HLTH-LIM-3.3",
+      "HLTH-END-6",
+      "HLTH-EXC-4.3"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "itemised_bill",
+        "event_ids": [
+          "E4",
+          "E5"
+        ],
+        "sop_id": "SOP-DOC-1.1",
+        "fix": "Request all missing documents in one consolidated message as soon as the coverage check is completed, ensuring the itemised bill is requested since it was not attached to the notice."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

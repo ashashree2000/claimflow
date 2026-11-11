@@ -1,0 +1,77 @@
+{
+  "packet_id": "62e528bca356",
+  "claim_id": "C08",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:59:59+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Ananya Bose",
+    "policy_number": "MTR-26-60744",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-19",
+    "incident_type": "theft",
+    "description": "The claimant's car was stolen from outside their building in Salt Lake, Kolkata, between the night of October 18, 2026, and the morning of October 19, 2026. An FIR was registered with the police on October 23, 2026.",
+    "location": "Kolkata",
+    "documents_attached": [
+      "police_report",
+      "registration_certificate"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves theft of a vehicle."
+  },
+  "documents_missing": [
+    "claim_form",
+    "driving_licence"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-60744 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2.2",
+        "quote": "We pay for the loss of the insured vehicle, or of parts fitted to it, caused by theft, subject to MOTOR-CON-5.2."
+      },
+      {
+        "clause_id": "MOTOR-CON-5.2",
+        "quote": "A theft claim is payable only if the theft was reported to the law-enforcement authority within 48 hours of the policyholder discovering it."
+      }
+    ],
+    "reasoning": "The claimant discovered the theft of her car on the morning of October 19, 2026, but only reported it to the police on October 23, 2026, which is well beyond the 48-hour requirement. According to MOTOR-COV-2.2 and MOTOR-CON-5.2, a theft claim is payable only if reported within this timeframe. Consequently, the claim is not covered.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "MOTOR-CON-5.2",
+      "MOTOR-COV-2.2",
+      "MOTOR-CON-5.1",
+      "MOTOR-COV-2",
+      "MOTOR-LIM-3.1",
+      "MOTOR-LIM-3.3",
+      "MOTOR-EXC-4",
+      "MOTOR-COV-2.5",
+      "MOTOR-DEF-1.1",
+      "MOTOR-EXC-4.1",
+      "MOTOR-EXC-4.3",
+      "MOTOR-COV-2.1"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

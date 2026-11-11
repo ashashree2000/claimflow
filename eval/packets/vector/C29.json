@@ -1,0 +1,78 @@
+{
+  "packet_id": "aa9caea45c6d",
+  "claim_id": "C29",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:50+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Usha Rani",
+    "policy_number": "HLT-26-52809",
+    "line_of_business": "health",
+    "incident_date": "2026-11-03",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted to the hospital for a planned knee replacement on 3 November 2026 and discharged on 7 November 2026.",
+    "location": "Visakhapatnam",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill"
+    ],
+    "severity": "medium",
+    "severity_reason": "The claim involves a planned hospital admission and the estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "id_proof"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-52809 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-DEF-1.1",
+        "quote": "Admission to a hospital as an inpatient for at least 24 consecutive hours on a doctor's advice."
+      },
+      {
+        "clause_id": "HLTH-COV-2.1",
+        "quote": "We pay for room, nursing, surgery, doctors' fees, tests and medicines during hospitalisation (HLTH-DEF-1.1), subject to HLTH-EXC-4.1 and HLTH-CON-5.1."
+      }
+    ],
+    "reasoning": "The claimant Usha Rani was admitted to the hospital for a planned knee replacement on 3 November 2026 and discharged on 7 November 2026, satisfying the inpatient hospitalisation requirement of at least 24 hours under HLTH-DEF-1.1. Under HLTH-COV-2.1, inpatient hospitalisation expenses are covered subject to specified exclusions and notices, and the provided documents support the claim.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.3"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "missing_document",
+        "document": "id_proof",
+        "event_ids": [],
+        "sop_id": "SOP-DOC-2.3",
+        "fix": "Review the checklist for health claims in SOP-DOC-2.3 and issue a document request for the insured person's ID proof, which was required but never requested."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

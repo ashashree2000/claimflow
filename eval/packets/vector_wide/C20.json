@@ -1,8 +1,8 @@
 {
-  "packet_id": "58bd3f061d2f",
+  "packet_id": "5e8af06569d4",
   "claim_id": "C20",
   "synthetic": true,
-  "created_at": "2026-11-11T22:43:03+00:00",
+  "created_at": "2026-11-11T23:04:16+00:00",
   "model": "gemini-3.5-flash-lite",
   "retrieval_mode": "vector_wide",
   "intake": {
@@ -11,13 +11,13 @@
     "line_of_business": "property",
     "incident_date": "2026-10-26",
     "incident_type": "gradual_damage",
-    "description": "The claimant noticed long cracks in their living room walls and compound wall, as well as a door that no longer closes properly, following heavy machinery excavation by a neighbour for a new building.",
+    "description": "Following neighbor's excavation work using heavy machinery starting October 20, 2026, the claimant noticed long cracks in two living room walls and the compound wall, along with a door alignment issue on October 26, 2026. A contractor estimated repairs at Rs 75,000.",
     "location": "Mysuru",
     "documents_attached": [
       "damage_photos"
     ],
     "severity": "medium",
-    "severity_reason": "The estimated loss is Rs 75,000, which falls between Rs 50,000 and Rs 4,99,999."
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
   },
   "documents_missing": [
     "claim_form",
@@ -37,30 +37,26 @@
     "decision": "not_covered",
     "citations": [
       {
-        "clause_id": "PROP-EXC-4.1",
-        "quote": "We do not pay for damage that happens gradually, including wear and tear, rot, damp, mould and water seeping slowly over weeks or months."
+        "clause_id": "PROP-EXC-4",
+        "quote": "The exclusions in this section apply to every part of PROP-COV-2 unless a clause says otherwise."
       },
       {
-        "clause_id": "PROP-COV-2",
-        "quote": "We cover the losses in this section, subject to the limits in PROP-LIM-3, the exclusions in PROP-EXC-4 and the conditions in PROP-CON-5."
+        "clause_id": "PROP-EXC-4.1",
+        "quote": "We do not pay for damage that happens gradually"
       }
     ],
-    "reasoning": "The claimant reported gradual damage involving long cracks in walls and a misaligned door following neighbour excavation. Under PROP-COV-2, coverage is strictly subject to the exclusions in PROP-EXC-4. Clause PROP-EXC-4.1 explicitly excludes damage that happens gradually. Therefore, the claim is not covered.",
+    "reasoning": "The claimant experienced cracks in the living room walls and compound wall following excavation work by a neighbor. Under policy exclusion PROP-EXC-4.1, damage that happens gradually is explicitly excluded from coverage. Since the policy excludes gradual damage for all parts of PROP-COV-2 per PROP-EXC-4, this claim is not covered.",
     "retrieval_mode": "vector_wide",
     "retrieved_ids": [
       "PROP-EXC-4.1",
+      "PROP-LIM-3.3",
       "PROP-COV-2",
       "PROP-EXC-4",
       "PROP-CON-5.1",
-      "PROP-END-6.1",
-      "PROP-EXC-4.5",
-      "PROP-LIM-3.1",
-      "PROP-DEF-1.1",
-      "PROP-COV-2.2",
-      "PROP-LIM-3.3",
-      "PROP-EXC-4.4",
+      "PROP-LIM-3.2",
       "PROP-CON-5.3",
-      "PROP-CON-5"
+      "PROP-LIM-3.1",
+      "PROP-EXC-4.5"
     ],
     "expanded_ids": [],
     "guardrail_notes": []
@@ -69,9 +65,9 @@
     "flags": [],
     "guardrail_notes": []
   },
-  "confidence": "medium",
+  "confidence": "high",
   "reasons": [
-    "intake output needed one retry to pass validation"
+    "all citations verified against the clause text; outputs passed validation first time"
   ],
   "needs_human_review": false,
   "errors": []

@@ -58,7 +58,7 @@ def list_packets(db=None) -> list[dict]:
                             ORDER BY p.created_at DESC, p.rowid DESC""").fetchall()
     keys = ["packet_id", "claim_id", "created_at", "model", "retrieval_mode", "needs_human_review",
             "review_action", "review_note", "review_ts"]
-    return [dict(zip(keys, r)) for r in rows]
+    return [dict(zip(keys, r, strict=True)) for r in rows]
 
 
 def get_packet(packet_id: str, db=None) -> dict | None:

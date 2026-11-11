@@ -1,0 +1,70 @@
+{
+  "packet_id": "150697fbb48f",
+  "claim_id": "C27",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:27+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Ishita Banerjee",
+    "policy_number": "HLT-26-40263",
+    "line_of_business": "health",
+    "incident_date": "2026-10-29",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted to the hospital through the emergency department for dengue fever on 29 October 2026, stayed for four days, and incurred a bill of Rs 85,000.",
+    "location": "Guwahati",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves an emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-40263 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claim involves a four-day emergency hospitalisation for dengue fever on 29 October 2026 with a bill of Rs 85,000. However, the policy conditions require notice of hospitalisation within 7 days of admission under HLTH-CON-5.1, but the provided facts and claim email do not state when the insurer was notified. Because a necessary fact regarding the date of notice is missing, the claim requires human review.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-COV-2.3",
+      "HLTH-COV-2",
+      "HLTH-LIM-3.2",
+      "HLTH-EXC-4",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.4",
+      "HLTH-EXC-4.3",
+      "HLTH-CON-5",
+      "HLTH-COV-2.2",
+      "HLTH-END-6"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

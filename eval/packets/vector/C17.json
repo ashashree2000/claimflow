@@ -1,0 +1,81 @@
+{
+  "packet_id": "a9494c9b564c",
+  "claim_id": "C17",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:03:26+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Nikhil Verma",
+    "policy_number": "PRP-26-44190",
+    "line_of_business": "property",
+    "incident_date": "2026-10-28",
+    "incident_type": "escape_of_water",
+    "description": "An upstairs bathroom pipe burst while the policyholder was away, causing water damage to the living room ceiling, floor, and sofa set. The damage was discovered upon returning home on 28 October 2026.",
+    "location": "Indore",
+    "documents_attached": [
+      "damage_photos",
+      "repair_estimate",
+      "proof_of_ownership"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is Rs 1,80,000, which falls between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-44190 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2.2",
+        "quote": "We pay for damage to the home and contents caused by water escaping suddenly from a fixed water tank, pipe or appliance, subject to PROP-EXC-4.1 and PROP-EXC-4.2."
+      },
+      {
+        "clause_id": "PROP-EXC-4.2",
+        "quote": "We do not pay for escape of water damage that happens while the home is unoccupied (PROP-DEF-1.3)."
+      }
+    ],
+    "reasoning": "The claim involves damage caused by water escaping from a burst pipe while the policyholder was away and the home was unoccupied for an extended period. According to PROP-COV-2.2, coverage for escape of water is subject to the exclusions in PROP-EXC-4.2. Because PROP-EXC-4.2 expressly excludes escape of water damage that happens while the home is unoccupied, the claim is not covered.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-COV-2.2",
+      "PROP-EXC-4.2",
+      "PROP-LIM-3.3",
+      "PROP-COV-2",
+      "PROP-EXC-4.1"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "duplicate_request",
+        "document": "claim_form",
+        "event_ids": [
+          "E5",
+          "E8"
+        ],
+        "sop_id": "SOP-DOC-1.3",
+        "fix": "Before requesting a document, check the claim file. Never request a document that has already been received."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

@@ -1,0 +1,81 @@
+{
+  "packet_id": "7719255b9d0a",
+  "claim_id": "C15",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:02:22+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Thomas Mathew",
+    "policy_number": "PRP-26-33062",
+    "line_of_business": "property",
+    "incident_date": "2026-10-25",
+    "incident_type": "escape_of_water",
+    "description": "The claimant noticed spreading damp patches, peeling paint, and mould in the upstairs bedroom caused by a roof leak that let rain seep in. A contractor provided a repair quote of Rs 40,000.",
+    "location": "Kochi",
+    "documents_attached": [
+      "damage_photos"
+    ],
+    "severity": "low",
+    "severity_reason": "The estimated loss of Rs 40,000 is below Rs 50,000 and the claim does not involve any high-severity triggers."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-33062 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2.2",
+        "quote": "We pay for damage to the home and contents caused by water escaping suddenly from a fixed water tank, pipe or appliance, subject to PROP-EXC-4.1 and PROP-EXC-4.2."
+      },
+      {
+        "clause_id": "PROP-EXC-4.1",
+        "quote": "We do not pay for damage that happens gradually, including wear and tear, rot, damp, mould and water seeping slowly over weeks or months."
+      }
+    ],
+    "reasoning": "The claim involves damage caused by rain seeping slowly through a roof leak since June, which constitutes gradual water seepage and damp over weeks or months. According to PROP-COV-2.2, escape of water coverage is subject to the exclusion in PROP-EXC-4.1. Therefore, because the damage occurred gradually and includes damp and mould from water seeping slowly, the claim is excluded from coverage.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-LIM-3.3",
+      "PROP-EXC-4.1",
+      "PROP-COV-2.2",
+      "PROP-COV-2",
+      "PROP-EXC-4.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "excessive_wait",
+        "document": null,
+        "event_ids": [
+          "E1",
+          "E8"
+        ],
+        "sop_id": "SOP-TIM-1.1",
+        "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL as required by SOP-TIM-1.1."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

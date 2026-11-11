@@ -1,0 +1,88 @@
+{
+  "packet_id": "1473a7ec1498",
+  "claim_id": "C24",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:06:06+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Neha Saxena",
+    "policy_number": "HLT-26-24418",
+    "line_of_business": "health",
+    "incident_date": "2026-10-24",
+    "incident_type": "outpatient",
+    "description": "The claimant visited an orthopaedic doctor at Lotus Clinic in Pune for lower back pain on 24 October 2026 and underwent diagnostic tests. The treatment was outpatient with a total cost of Rs 9,000.",
+    "location": "Pune",
+    "documents_attached": [
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "low",
+    "severity_reason": "The claim is for outpatient treatment with an estimated loss under Rs 50,000 and does not involve any high-severity triggers such as emergency hospitalisation."
+  },
+  "documents_missing": [
+    "claim_form",
+    "discharge_summary"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-24418 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-EXC-4.3",
+        "quote": "Outpatient treatment: We do not pay for consultations, tests or medicines that are not part of a hospitalisation or a day-care procedure."
+      }
+    ],
+    "reasoning": "The claimant underwent outpatient treatment including doctor consultations and diagnostic tests for lower back pain without any hospitalisation or day-care procedure. According to exclusion HLTH-EXC-4.3, the policy does not pay for consultations, tests, or medicines that are not part of a hospitalisation or day-care procedure. Therefore, the claim is not covered.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-EXC-4.3",
+      "HLTH-COV-2.2",
+      "HLTH-LIM-3.1",
+      "HLTH-COV-2",
+      "HLTH-COV-2.1",
+      "HLTH-EXC-4",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.4",
+      "HLTH-DEF-1.1",
+      "HLTH-COV-2.3",
+      "HLTH-CON-5",
+      "HLTH-LIM-3.2",
+      "HLTH-EXC-4.5",
+      "HLTH-LIM-3.3",
+      "HLTH-DEF-1.3",
+      "HLTH-END-6"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "duplicate_request",
+        "document": "claim_form",
+        "event_ids": [
+          "E8",
+          "E10"
+        ],
+        "sop_id": "SOP-DOC-1.3",
+        "fix": "Before requesting a document, check the claim file and never request a document that has already been received."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

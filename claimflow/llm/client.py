@@ -45,7 +45,7 @@ class LLMClient:
                 return fn()
             except RateLimitError:
                 if attempt == self.max_retries:
-                    raise QuotaExhausted("Model API rate limit or quota reached; try again later.")
+                    raise QuotaExhausted("Model API rate limit or quota reached; try again later.") from None
                 time.sleep(min(60, 2 ** (attempt + 2)))  # 4, 8, 16, 32, 60 s
 
     def _log(self, agent: str, kind: str, model: str, r: LLMResult | None, ok: bool, err: str = "") -> None:
@@ -100,13 +100,13 @@ class LLMClient:
             idx = todo[s:s + batch_size]
             start = time.perf_counter()
             try:
-                vecs = self._with_retry(lambda: self.provider.embed([texts[i] for i in idx], self.embed_model, task_type))
+                vecs = self._with_retry(lambda idx=idx: self.provider.embed([texts[i] for i in idx], self.embed_model, task_type))
             except Exception as e:
                 self._log(agent, "embed", self.embed_model, None, False, type(e).__name__)
                 raise
             ms = (time.perf_counter() - start) * 1000
             self._log(agent, "embed", self.embed_model, LLMResult(text="", model=self.embed_model, latency_ms=ms), True)
-            for i, v in zip(idx, vecs):
+            for i, v in zip(idx, vecs, strict=True):
                 out[i] = v
                 self.cache.set(self.cache.key("embed", self.embed_model, {"text": texts[i], "task": task_type}),
                                {"v": v, "ms": ms / len(idx)})

@@ -1,8 +1,8 @@
 {
-  "packet_id": "154937ae8c97",
+  "packet_id": "e1a295add97c",
   "claim_id": "C18",
   "synthetic": true,
-  "created_at": "2026-11-11T22:42:23+00:00",
+  "created_at": "2026-11-11T23:03:49+00:00",
   "model": "gemini-3.5-flash-lite",
   "retrieval_mode": "vector",
   "intake": {
@@ -11,13 +11,13 @@
     "line_of_business": "property",
     "incident_date": "2026-10-30",
     "incident_type": "storm_flood",
-    "description": "Heavy rain caused drains to overflow, resulting in rainwater entering the ground floor of the house. The incident caused damage to the wooden flooring and walls.",
+    "description": "Rainwater overflowed from drains and entered the ground floor of the house after heavy rain on 30 October 2026. The incident caused damage to the wooden flooring and walls, with an estimated repair cost of Rs 2,40,000.",
     "location": "Thane",
     "documents_attached": [
       "damage_photos"
     ],
     "severity": "medium",
-    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 (Rs 2,40,000)."
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
   },
   "documents_missing": [
     "claim_form",
@@ -34,29 +34,16 @@
     "method": "rules"
   },
   "coverage": {
-    "decision": "covered",
-    "citations": [
-      {
-        "clause_id": "PROP-DEF-1.4",
-        "quote": "Flood: Water entering the home from overflowing rivers, lakes or drains, or from the build-up of surface rainwater."
-      },
-      {
-        "clause_id": "PROP-COV-2.3",
-        "quote": "Storm and flood: We pay for damage to the home and contents caused by storm, high winds or flood, subject to PROP-EXC-4.3."
-      },
-      {
-        "clause_id": "PROP-END-6.1",
-        "quote": "Flood cover for the building: PROP-EXC-4.3 does not apply to damage to the home itself (PROP-DEF-1.1)."
-      }
-    ],
-    "reasoning": "Heavy rain caused drains to overflow and rainwater to enter the ground floor, which qualifies as a flood under PROP-DEF-1.4. PROP-COV-2.3 covers damage caused by flood subject to exclusions, and PROP-END-6.1 ensures that any exclusion regarding flood does not apply to damage to the home itself. Therefore, the damage to the wooden flooring and walls of the house is covered.",
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The policy excludes flood damage under PROP-EXC-4.3, but this exclusion is stated to be amended by PROP-END-6.1. However, the policy text provided does not contain PROP-END-6.1 to determine if the flood damage is reinstated or covered under specific conditions. Therefore, the clauses do not fully address the event and the claim requires review by a senior handler.",
     "retrieval_mode": "vector",
     "retrieved_ids": [
       "PROP-DEF-1.4",
       "PROP-COV-2.3",
+      "PROP-LIM-3.3",
       "PROP-EXC-4.1",
-      "PROP-END-6.1",
-      "PROP-COV-2"
+      "PROP-EXC-4.3"
     ],
     "expanded_ids": [],
     "guardrail_notes": []
@@ -66,28 +53,20 @@
       {
         "type": "missing_document",
         "document": "repair_estimate",
-        "event_ids": [],
-        "sop_id": "SOP-DOC-2.2",
-        "fix": "Ensure that all required documents from the property checklist—including the repair estimate—are either attached at intake or requested from the claimant."
-      },
-      {
-        "type": "out_of_order",
-        "document": null,
         "event_ids": [
           "E5",
-          "E6",
-          "E7"
+          "E6"
         ],
         "sop_id": "SOP-DOC-1.1",
-        "fix": "Request all missing documents in one consolidated message immediately after the coverage check is completed, rather than requesting them in separate messages or after assigning the surveyor."
+        "fix": "Review the property checklist and request the repair estimate alongside the other missing documents in the initial consolidated request message."
       }
     ],
     "guardrail_notes": []
   },
   "confidence": "medium",
   "reasons": [
-    "intake output needed one retry to pass validation"
+    "coverage could not be decided from the policy clauses"
   ],
-  "needs_human_review": false,
+  "needs_human_review": true,
   "errors": []
 }

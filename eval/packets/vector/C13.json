@@ -1,0 +1,86 @@
+{
+  "packet_id": "036f4c7bf07a",
+  "claim_id": "C13",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:01:26+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Farah Khan",
+    "policy_number": "PRP-26-20455",
+    "line_of_business": "property",
+    "incident_date": "2026-10-20",
+    "incident_type": "burglary_theft",
+    "description": "The claimant discovered that the back door of their house was forced open and a laptop, camera, and cash were stolen while they were out. The police were called immediately and a complaint was registered.",
+    "location": "Delhi",
+    "documents_attached": [
+      "police_report",
+      "damage_photos"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999."
+  },
+  "documents_missing": [
+    "claim_form",
+    "repair_estimate",
+    "proof_of_ownership"
+  ],
+  "route": {
+    "line_of_business": "property",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number PRP-26-20455 has prefix for property; intake agent read the email as property",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "PROP-COV-2.4",
+        "quote": "We pay for contents stolen, and damage to the home caused, during a theft involving forcible and violent entry into the home, subject to PROP-EXC-4.4 and PROP-CON-5.2."
+      },
+      {
+        "clause_id": "PROP-CON-5.2",
+        "quote": "A burglary must be reported to the police within 24 hours of being discovered."
+      },
+      {
+        "clause_id": "PROP-CON-5.1",
+        "quote": "The policyholder must tell us about any loss within 14 days of discovering it."
+      }
+    ],
+    "reasoning": "The claim involves a burglary with forcible entry into the home, satisfying the requirements of PROP-COV-2.4. Additionally, the police report was registered immediately on the same night of the incident satisfying PROP-CON-5.2, and notice was given to the insurer within the required timeframe.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "PROP-EXC-4.4",
+      "PROP-COV-2.4",
+      "PROP-CON-5.2",
+      "PROP-CON-5.1",
+      "PROP-COV-2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "repeated_verification",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E9"
+        ],
+        "sop_id": "SOP-VER-1.2",
+        "fix": "Each verification step is performed once per claim unless claim facts change and the reason is recorded. The handler should not repeat the policy status verification without a recorded reason."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

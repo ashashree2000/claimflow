@@ -1,0 +1,86 @@
+{
+  "packet_id": "790c5cb88799",
+  "claim_id": "C06",
+  "synthetic": true,
+  "created_at": "2026-11-11T22:59:01+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Priya Nair",
+    "policy_number": "MTR-26-45530",
+    "line_of_business": "motor",
+    "incident_date": "2026-10-24",
+    "incident_type": "fire_natural_peril",
+    "description": "A hailstorm hit the vehicle while parked in Shimla on 24 October 2026, causing dents to the roof and bonnet and cracking a side mirror.",
+    "location": "Shimla",
+    "documents_attached": [
+      "driving_licence",
+      "registration_certificate",
+      "damage_photos",
+      "repair_estimate"
+    ],
+    "severity": "low",
+    "severity_reason": "The estimated loss of Rs 45,000 is below the threshold for medium or high severity, and the incident does not involve bodily injury, vehicle theft, fire, or emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "motor",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number MTR-26-45530 has prefix for motor; intake agent read the email as motor",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "MOTOR-COV-2",
+        "quote": "We cover the losses in this section, subject to the limits in MOTOR-LIM-3, the exclusions in MOTOR-EXC-4 and the conditions in MOTOR-CON-5."
+      },
+      {
+        "clause_id": "MOTOR-COV-2.5",
+        "quote": "Fire and natural perils: We pay for damage to the insured vehicle caused by fire, explosion, lightning, storm, hail, flood or landslide."
+      },
+      {
+        "clause_id": "MOTOR-LIM-3.1",
+        "quote": "For claims under MOTOR-COV-2.1, MOTOR-COV-2.2 and MOTOR-COV-2.5 the most we pay is the market value (MOTOR-DEF-1.4). The policyholder pays the first Rs 5,000 of each claim."
+      }
+    ],
+    "reasoning": "The claimant's vehicle suffered dent and mirror damage caused by a hailstorm while parked in Shimla. Under clause MOTOR-COV-2.5, damage caused by hail is covered, and the general coverage section MOTOR-COV-2 applies subject to the limits in MOTOR-LIM-3. The policy covers this natural peril event, with the policyholder responsible for the first Rs 5,000 excess per claim as stated in MOTOR-LIM-3.1.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "MOTOR-COV-2.5",
+      "MOTOR-COV-2.1",
+      "MOTOR-COV-2",
+      "MOTOR-LIM-3.1",
+      "MOTOR-LIM-3.2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E6",
+          "E4"
+        ],
+        "sop_id": "SOP-VER-1.1",
+        "fix": "Ensure that the coverage check is completed before assigning a surveyor. Review SOP-VER-1.1 to verify the correct sequence of verification and assignment steps."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

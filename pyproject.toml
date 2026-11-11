@@ -1,0 +1,18 @@
+[project]
+name = "claimflow"
+version = "0.1.0"
+description = "Multi-agent claims-intake copilot with GraphRAG over policy clauses (synthetic data)."
+requires-python = ">=3.10"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+extend-exclude = ["ProcessDNA"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E501", "B008"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

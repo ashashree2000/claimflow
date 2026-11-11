@@ -1,0 +1,66 @@
+{
+  "packet_id": "04cb47e4809e",
+  "claim_id": "C27",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:22+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Ishita Banerjee",
+    "policy_number": "HLT-26-40263",
+    "line_of_business": "health",
+    "incident_date": "2026-10-29",
+    "incident_type": "hospitalisation",
+    "description": "The claimant was admitted to the hospital through the emergency department for dengue fever on 29 October 2026, stayed for four days, and incurred a bill of Rs 85,000.",
+    "location": "Guwahati",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "high",
+    "severity_reason": "Severity is high because the claim involves an emergency hospital admission."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-40263 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "not_covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-CON-5.2",
+        "quote": "Claims must be supported by the original discharge summary and itemised hospital bill."
+      }
+    ],
+    "reasoning": "The claimant submitted a claim for inpatient hospitalisation due to dengue fever. However, clause HLTH-CON-5.2 explicitly requires that claims must be supported by original documents. As the claimant provided copies rather than the original discharge summary and itemised bill, the claim cannot be covered at this time.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2.1",
+      "HLTH-LIM-3.1",
+      "HLTH-COV-2.3"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

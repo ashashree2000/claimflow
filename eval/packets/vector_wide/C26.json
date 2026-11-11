@@ -1,0 +1,79 @@
+{
+  "packet_id": "bfa382357601",
+  "claim_id": "C26",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:07:00+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector_wide",
+  "intake": {
+    "claimant_name": "Gopal Menon",
+    "policy_number": "HLT-26-35541",
+    "line_of_business": "health",
+    "incident_date": "2026-10-27",
+    "incident_type": "hospitalisation",
+    "description": "The claimant slipped on stairs at home on 27 October 2026, resulting in a hip fracture. They were admitted to the hospital via ambulance for surgery and stayed for five days.",
+    "location": "Kozhikode",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 (Rs 2,82,500 total) for a hospitalisation."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-35541 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "needs_review",
+    "citations": [],
+    "reasoning": "The claim involves a hospitalisation due to an accidental hip fracture following a fall at home. However, the provided policy clauses do not contain any information regarding the policy start date or when notice of hospitalisation was given to the insurer. Therefore, the claim cannot be fully evaluated against the exclusions and conditions at intake and must be referred for human review.",
+    "retrieval_mode": "vector_wide",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2",
+      "HLTH-COV-2.3",
+      "HLTH-EXC-4",
+      "HLTH-CON-5",
+      "HLTH-EXC-4.3",
+      "HLTH-EXC-4.4",
+      "HLTH-COV-2.2",
+      "HLTH-END-6"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E4"
+        ],
+        "sop_id": "SOP-VER-1.1",
+        "fix": "Ensure that policy status verification and the coverage check are completed before assigning a medical reviewer, as required by the order of verification."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "medium",
+  "reasons": [
+    "coverage could not be decided from the policy clauses"
+  ],
+  "needs_human_review": true,
+  "errors": []
+}

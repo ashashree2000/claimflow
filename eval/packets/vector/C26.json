@@ -1,0 +1,81 @@
+{
+  "packet_id": "42cf21ea2cf3",
+  "claim_id": "C26",
+  "synthetic": true,
+  "created_at": "2026-11-11T23:06:56+00:00",
+  "model": "gemini-3.5-flash-lite",
+  "retrieval_mode": "vector",
+  "intake": {
+    "claimant_name": "Gopal Menon",
+    "policy_number": "HLT-26-35541",
+    "line_of_business": "health",
+    "incident_date": "2026-10-27",
+    "incident_type": "hospitalisation",
+    "description": "The claimant slipped on stairs at home on 27 October 2026, resulting in a hip fracture. They were admitted to the hospital via ambulance for surgery and stayed for five days.",
+    "location": "Kozhikode",
+    "documents_attached": [
+      "discharge_summary",
+      "itemised_bill",
+      "id_proof"
+    ],
+    "severity": "medium",
+    "severity_reason": "The estimated loss is between Rs 50,000 and Rs 4,99,999 (Rs 2,82,500 total) for a hospitalisation."
+  },
+  "documents_missing": [
+    "claim_form"
+  ],
+  "route": {
+    "line_of_business": "health",
+    "specialists": [
+      "coverage",
+      "process"
+    ],
+    "reason": "policy number HLT-26-35541 has prefix for health; intake agent read the email as health",
+    "method": "rules"
+  },
+  "coverage": {
+    "decision": "covered",
+    "citations": [
+      {
+        "clause_id": "HLTH-COV-2.1",
+        "quote": "Inpatient hospitalisation: We pay for room, nursing, surgery, doctors' fees, tests and medicines during hospitalisation (HLTH-DEF-1.1), subject to HLTH-EXC-4.1 and HLTH-CON-5.1."
+      },
+      {
+        "clause_id": "HLTH-DEF-1.1",
+        "quote": "Hospitalisation: Admission to a hospital as an inpatient for at least 24 consecutive hours on a doctor's advice."
+      }
+    ],
+    "reasoning": "The claimant Gopal Menon was admitted to the hospital as an inpatient and stayed for five days following a hip fracture, which satisfies the definition of hospitalisation under HLTH-DEF-1.1. Under HLTH-COV-2.1, inpatient hospitalisation expenses for surgery and hospital stay are covered. The claim is fully supported by the required medical and billing documents.",
+    "retrieval_mode": "vector",
+    "retrieved_ids": [
+      "HLTH-DEF-1.1",
+      "HLTH-CON-5.1",
+      "HLTH-COV-2.1",
+      "HLTH-CON-5.2",
+      "HLTH-COV-2"
+    ],
+    "expanded_ids": [],
+    "guardrail_notes": []
+  },
+  "process": {
+    "flags": [
+      {
+        "type": "out_of_order",
+        "document": null,
+        "event_ids": [
+          "E3",
+          "E4"
+        ],
+        "sop_id": "SOP-VER-1.1",
+        "fix": "Ensure that policy status verification and the coverage check are completed before assigning a medical reviewer, as required by the order of verification."
+      }
+    ],
+    "guardrail_notes": []
+  },
+  "confidence": "high",
+  "reasons": [
+    "all citations verified against the clause text; outputs passed validation first time"
+  ],
+  "needs_human_review": false,
+  "errors": []
+}

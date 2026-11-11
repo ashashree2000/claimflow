@@ -44,9 +44,29 @@ def search(llm: LLMClient, query: str, lob: str | None, k: int = config.TOP_K,
     qv = llm.embed([query], agent=agent, task_type="RETRIEVAL_QUERY")[0]
     where = {"lob": lob} if lob else None
     res = col.query(query_embeddings=[qv], n_results=k, where=where)
-    return [(i, round(1 - d, 4)) for i, d in zip(res["ids"][0], res["distances"][0])]
+    return [(i, round(1 - d, 4)) for i, d in zip(res["ids"][0], res["distances"][0], strict=True)]
 
 
 def clauses_by_id(ids: list[str]) -> list[Clause]:
     allc = {**load_policies(), **load_sops()}
     return [allc[i] for i in ids if i in allc]
+
+
+def index_ready() -> bool:
+    try:
+        client = _client()
+        return all(client.get_collection(n, embedding_function=None).count() > 0
+                   for n in (POLICY_COLLECTION, SOP_COLLECTION))
+    except Exception:
+        return False
+
+
+def ensure_index(llm: LLMClient) -> bool:
+    """Build the index if it is missing. Returns False if it cannot be built (no key and no cached embeddings)."""
+    if index_ready():
+        return True
+    try:
+        build_index(llm)
+        return True
+    except Exception:
+        return False
