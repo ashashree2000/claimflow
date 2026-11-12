@@ -1,6 +1,8 @@
+import json
+
 import pandas as pd
 import streamlit as st
-from common import DECISION_TEXT, FOOTER, MODES, claim_title, labels, results
+from common import DECISION_TEXT, FOOTER, MODES, ROOT, claim_title, labels, results
 
 st.title("Evaluation")
 r = results()
@@ -55,6 +57,15 @@ st.dataframe(pd.DataFrame({"": ["Policy type routed correctly", "Claim details e
                                       f"{g['process_flags_matched']} of {g['process_flags_predicted']}",
                                       pct(g["process_fix_sop_correct"]), str(g["false_flags_on_clean_claims"])]}),
              hide_index=True, width="stretch")
+
+judge = ROOT / "eval/judge_results.json"
+if judge.exists():
+    j = json.loads(judge.read_text())
+    st.markdown(f"**Quality of the proposed fixes (model-graded):** a separate Gemini call scored each of the "
+                f"{j['n_scored']} fixes for correctly found problems from 1 to 5 against a written rubric. "
+                f"Average {j['mean_score']} out of 5 (" + ", ".join(f"{k}: {v}" for k, v in
+                                                          sorted(j["score_counts"].items(), reverse=True)) +
+                "). The grader is the same model family as the agents, so this is a rough signal only.")
 
 st.subheader("What the numbers say")
 st.markdown(

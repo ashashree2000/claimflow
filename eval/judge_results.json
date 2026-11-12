@@ -1,0 +1,223 @@
+{
+  "model_graded": true,
+  "judge_model": "gemini-3.5-flash-lite",
+  "n_fixes": 23,
+  "n_scored": 23,
+  "mean_score": 3.91,
+  "score_counts": {
+    "1": 0,
+    "2": 4,
+    "3": 4,
+    "4": 5,
+    "5": 10
+  },
+  "rows": [
+    {
+      "claim_id": "C01",
+      "type": "excessive_wait",
+      "sop_id": "SOP-TIM-1.1",
+      "sop_correct": true,
+      "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL. E8 occurred 48 hours after E1.",
+      "score": 5,
+      "reason": "The fix accurately identifies the specific delay (acknowledgement sent at E8, 48 hours after FNOL at E1 instead of the required 24 hours), states the exact action required by SOP-TIM-1.1, and is fully consistent with the cited procedure."
+    },
+    {
+      "claim_id": "C03",
+      "type": "duplicate_request",
+      "sop_id": "SOP-DOC-1.3",
+      "sop_correct": true,
+      "fix": "Before requesting a document, check the claim file to ensure it has not already been received. The handler should not have requested the claim form again on E12 since it was already received in E9.",
+      "score": 5,
+      "reason": "The proposed fix specifically identifies the duplicate request for the claim form on E12 when it had already been received on E9, provides clear instructions on what the handler should do based on the procedure, and aligns perfectly with SOP-DOC-1.3."
+    },
+    {
+      "claim_id": "C04",
+      "type": "out_of_order",
+      "sop_id": "SOP-VER-1.1",
+      "sop_correct": true,
+      "fix": "Verify the policy status and complete the coverage check before assigning a surveyor or a medical reviewer.",
+      "score": 2,
+      "reason": "The proposed fix merely repeats the text of the procedure section without addressing the specific timeline error in the claim, such as pointing out that the surveyor was assigned at E3 before policy status and coverage were verified at E4 and E5."
+    },
+    {
+      "claim_id": "C05",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-1.1",
+      "sop_correct": false,
+      "fix": "Review the checklist for missing documents and include the vehicle registration certificate in the initial request message alongside the claim form and repair estimate.",
+      "score": 3,
+      "reason": "The fix suggests including the vehicle registration certificate in the initial request message, but the timeline shows that requests were already sent out in E5 and E6. Therefore, telling the handler to include it in the initial request is no longer actionable for this specific claim's state, although it correctly identifies the missing document per SOP-DOC-1.1."
+    },
+    {
+      "claim_id": "C07",
+      "type": "repeated_verification",
+      "sop_id": "SOP-VER-1.2",
+      "sop_correct": true,
+      "fix": "Do not repeat verification steps unless claim facts change and the reason is recorded in the claim file.",
+      "score": 4,
+      "reason": "The proposed fix correctly identifies the issue of repeated verification and aligns with the procedure, but is slightly generic and does not explicitly reference the specific repeated policy status check from E9."
+    },
+    {
+      "claim_id": "C09",
+      "type": "excessive_wait",
+      "sop_id": "SOP-TIM-1.1",
+      "sop_correct": true,
+      "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL. Ensure acknowledgements are dispatched promptly to comply with the 24-hour limit.",
+      "score": 2,
+      "reason": "The proposed fix is mostly generic advice that repeats the procedure without addressing the specific problem in this claim (where the acknowledgement was sent 24 hours late on October 31 instead of October 30)."
+    },
+    {
+      "claim_id": "C09",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-2.1",
+      "sop_correct": true,
+      "fix": "Identify all missing mandatory documents from the motor checklist, including the driver's driving licence, and request them immediately after the coverage check.",
+      "score": 5,
+      "reason": "The fix correctly identifies the missing driving licence based on the SOP-DOC-2.1 checklist for motor claims, specifies exactly what action the handler should take, and aligns with the timeline of the claim handling history."
+    },
+    {
+      "claim_id": "C10",
+      "type": "duplicate_request",
+      "sop_id": "SOP-DOC-1.3",
+      "sop_correct": true,
+      "fix": "Before requesting a document, check the claim file. Never request a document that has already been received or was attached to the notice.",
+      "score": 2,
+      "reason": "The proposed fix merely repeats the general rule from SOP-DOC-1.3 without naming the specific duplicate document (damage_photos) or giving concrete instructions tailored to this claim."
+    },
+    {
+      "claim_id": "C11",
+      "type": "out_of_order",
+      "sop_id": "SOP-VER-1.1",
+      "sop_correct": true,
+      "fix": "Verify the policy status and complete the coverage check before assigning a surveyor. Reorder the steps according to SOP-VER-1.1.",
+      "score": 5,
+      "reason": "The fix specifically identifies the out of order sequence regarding policy status, coverage check, and surveyor assignment, tells the handler exactly what to do based on SOP-VER-1.1, and is fully consistent with the cited procedure."
+    },
+    {
+      "claim_id": "C11",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-1.1",
+      "sop_correct": false,
+      "fix": "Request all missing documents from the property checklist, including proof of ownership, in one consolidated message as soon as coverage is checked.",
+      "score": 5,
+      "reason": "Names the specific missing document (proof of ownership), states the exact action required by the handler (request in one consolidated message), and is fully consistent with the cited procedure section SOP-DOC-1.1."
+    },
+    {
+      "claim_id": "C13",
+      "type": "repeated_verification",
+      "sop_id": "SOP-VER-1.2",
+      "sop_correct": true,
+      "fix": "Each verification step is performed once per claim unless claim facts change and the reason is recorded. The handler should not repeat the policy status verification without a recorded reason.",
+      "score": 5,
+      "reason": "The fix specifically names the repeated verification of the policy status without a recorded reason, tells the handler not to repeat it, and is fully consistent with SOP-VER-1.2."
+    },
+    {
+      "claim_id": "C15",
+      "type": "excessive_wait",
+      "sop_id": "SOP-TIM-1.1",
+      "sop_correct": true,
+      "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL as required by SOP-TIM-1.1.",
+      "score": 2,
+      "reason": "The proposed fix is mostly generic advice. It repeats the rule from the procedure section without addressing the specific issue in this claim, which is that the acknowledgement was sent 24 hours late (FNOL received on Oct 26 at 17:35, but acknowledgement only sent on Oct 28 at 17:35)."
+    },
+    {
+      "claim_id": "C17",
+      "type": "duplicate_request",
+      "sop_id": "SOP-DOC-1.3",
+      "sop_correct": true,
+      "fix": "Before requesting a document, check the claim file. Never request a document that has already been received.",
+      "score": 3,
+      "reason": "The proposed fix repeats the general rule from the procedure section without instructing the handler on what to do specifically regarding the duplicate claim form request already present in the history."
+    },
+    {
+      "claim_id": "C18",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-1.1",
+      "sop_correct": false,
+      "fix": "Review the property checklist and request the repair estimate alongside the other missing documents in the initial consolidated request message.",
+      "score": 3,
+      "reason": "The fix suggests requesting the repair estimate in the initial consolidated message, which aligns with SOP-DOC-1.1, but the timeline shows initial requests were already sent on 2026-10-31 (E5, E6), making the timing advice inaccurate to the current history."
+    },
+    {
+      "claim_id": "C19",
+      "type": "out_of_order",
+      "sop_id": "SOP-VER-1.1",
+      "sop_correct": true,
+      "fix": "Verify the policy status and complete the coverage check before assigning a surveyor.",
+      "score": 4,
+      "reason": "The proposed fix correctly identifies the out-of-order issue (assigning a surveyor before policy verification and coverage check) and is consistent with SOP-VER-1.1, though it slightly shortens the full scope by omitting the medical reviewer mention which was not part of this specific claim."
+    },
+    {
+      "claim_id": "C21",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-1.1",
+      "sop_correct": false,
+      "fix": "Request all missing documents in one consolidated message as soon as the coverage check is completed, ensuring the itemised bill is requested since it was not attached to the notice.",
+      "score": 5,
+      "reason": "Names the specific missing document (itemised bill), specifies the exact action required (request in one consolidated message), and aligns fully with the cited procedure section SOP-DOC-1.1."
+    },
+    {
+      "claim_id": "C23",
+      "type": "repeated_verification",
+      "sop_id": "SOP-VER-1.2",
+      "sop_correct": true,
+      "fix": "Do not repeat the policy status verification step without a recorded reason, as each verification step is performed only once per claim.",
+      "score": 5,
+      "reason": "The fix names the specific problem (repeated policy status verification without a recorded reason), tells the handler exactly what to do (do not repeat it), and is fully consistent with SOP-VER-1.2."
+    },
+    {
+      "claim_id": "C24",
+      "type": "duplicate_request",
+      "sop_id": "SOP-DOC-1.3",
+      "sop_correct": true,
+      "fix": "Before requesting a document, check the claim file and never request a document that has already been received.",
+      "score": 3,
+      "reason": "The proposed fix repeats the general rule from the procedure section without instructing the handler to cancel the redundant document request (for the claim form, which was already received on 2026-10-27) or identifying the specific error made in E10."
+    },
+    {
+      "claim_id": "C25",
+      "type": "excessive_wait",
+      "sop_id": "SOP-TIM-1.1",
+      "sop_correct": true,
+      "fix": "Send the claimant an acknowledgement within 24 hours of receiving the FNOL to comply with SOP-TIM-1.1.",
+      "score": 4,
+      "reason": "The proposed fix is correct, consistent with the cited procedure section SOP-TIM-1.1, and addresses the excessive wait time in sending the acknowledgement. However, it is slightly generic and does not explicitly reference the specific timing lapse that occurred in this particular claim's history."
+    },
+    {
+      "claim_id": "C25",
+      "type": "duplicate_request",
+      "sop_id": "SOP-DOC-1.3",
+      "sop_correct": true,
+      "fix": "Check the claim file before requesting a document and never request a document that has already been received.",
+      "score": 4,
+      "reason": "The fix is correct and consistent with SOP-DOC-1.3, accurately addressing the duplicate request for the ID proof. However, it is slightly generic as it repeats the rule rather than naming the specific document (ID proof) involved in this particular claim."
+    },
+    {
+      "claim_id": "C26",
+      "type": "out_of_order",
+      "sop_id": "SOP-VER-1.1",
+      "sop_correct": true,
+      "fix": "Ensure that policy status verification and the coverage check are completed before assigning a medical reviewer, as required by the order of verification.",
+      "score": 5,
+      "reason": "The proposed fix correctly identifies the out-of-order issue regarding the medical reviewer assignment before policy and coverage verification, clearly instructs the handler on the required correct order, and is fully consistent with SOP-VER-1.1."
+    },
+    {
+      "claim_id": "C29",
+      "type": "missing_document",
+      "sop_id": "SOP-DOC-2.3",
+      "sop_correct": true,
+      "fix": "Review the checklist for health claims in SOP-DOC-2.3 and issue a document request for the insured person's ID proof, which was required but never requested.",
+      "score": 5,
+      "reason": "The fix specifically identifies the missing id_proof as required by SOP-DOC-2.3, states exactly what the handler should do (issue a document request for the insured person's ID proof), and is fully consistent with the cited procedure."
+    },
+    {
+      "claim_id": "C30",
+      "type": "repeated_verification",
+      "sop_id": "SOP-VER-1.2",
+      "sop_correct": true,
+      "fix": "Perform each verification step only once per claim unless claim facts change and record the reason for any repetition.",
+      "score": 4,
+      "reason": "The fix is correct, consistent with SOP-VER-1.2, and identifies the core issue of repeated verification (re-verifying policy status at E8), but it is slightly generic and does not explicitly reference the specific redundant check in the handling history."
+    }
+  ]
+}

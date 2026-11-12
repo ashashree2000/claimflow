@@ -71,6 +71,7 @@ These parts don't depend on clause search:
 - Claim details extracted correctly: 97%, averaged over 8 fields.
 - Handling problems found: 23 of 28. 23 of the 26 flags raised were real problems.
 - Fix cites the right procedure section: 19 of 23. There was 1 false alarm across the 6 clean claims.
+- Quality of those 23 fixes, scored 1–5 by a separate Gemini call against a written rubric: average 3.9 (ten 5s, five 4s, four 3s, four 2s). The low scores went to fixes that repeat the procedure rule instead of saying what to do on that claim. The grader is the same model family as the agents, so this is a rough signal (`eval/judge_fixes.py`, `eval/judge_results.json`).
 
 **What this shows**
 - **Following cross-references helped where it was meant to.** 7 of the 8 cross-reference claims were right with the graph. Plain search given the same number of clauses got 5, and search with 5 clauses got 4. With only 8 such claims, though, the gap is two or three claims, not a statistically firm result.
@@ -117,7 +118,7 @@ The API also runs in Docker. The key is passed in when the container starts and 
 docker build -t claimflow-api . && docker run --rm -p 8000:8000 --env-file .env claimflow-api
 ```
 
-GitHub Actions runs linting, the data checks and the tests on every push. A second, manually started workflow runs a 5-claim live evaluation using a repository secret.
+GitHub Actions runs linting, the data checks, the tests and a Docker build with a health check on every push. A second, manually started workflow runs a 5-claim live evaluation using a repository secret.
 
 ## Project layout
 
